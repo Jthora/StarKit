@@ -7,21 +7,21 @@
 
 import UIKit
 
-class PsionicImageGenerator {
+open class PsionicImageGenerator {
     
-    static let main:PsionicImageGenerator = PsionicImageGenerator()
+    public static let main:PsionicImageGenerator = PsionicImageGenerator()
     
-    var imageStrip:PsionoStreamImageStrip? = nil
-    var renderAtAll:Bool = true
-    var renderRetrogrades:Bool = false
-    var renderRetrogradesWithInvertedColors:Bool = false
-    var solidColors:Bool = false
-    var markYears:Bool = false
-    var markMonths:Bool = false
-    var largeMarks:Bool = false
+    public var imageStrip:PsionoStreamImageStrip? = nil
+    public var renderAtAll:Bool = true
+    public var renderRetrogrades:Bool = false
+    public var renderRetrogradesWithInvertedColors:Bool = false
+    public var solidColors:Bool = false
+    public var markYears:Bool = false
+    public var markMonths:Bool = false
+    public var largeMarks:Bool = false
     
-    var pixelsLeftForLargeMark:Int = 0
-    func generateStrip(planet: CoreAstrology.AspectBody, platnetStateTimeline:[PlanetState]) -> PsionoStreamImageStrip? {
+    public var pixelsLeftForLargeMark:Int = 0
+    public func generateStrip(planet: CoreAstrology.AspectBody, platnetStateTimeline:[PlanetState]) -> PsionoStreamImageStrip? {
         
         let width = platnetStateTimeline.count
         let height = 1

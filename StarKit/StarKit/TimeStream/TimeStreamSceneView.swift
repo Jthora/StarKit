@@ -9,7 +9,7 @@ import SceneKit
 import SwiftUI
 
 
-struct TimeStreamSceneView: UIViewRepresentable {
+public struct TimeStreamSceneView: UIViewRepresentable {
     
     let scene = TimeStreamScene()
     
@@ -56,7 +56,7 @@ struct TimeStreamSceneView: UIViewRepresentable {
         return testNodes
     }()
     
-    func makeUIView(context: Context) -> SCNView {
+    public func makeUIView(context: Context) -> SCNView {
         // create and add a camera to the scene
         scene.rootNode.addChildNode(cameraNode)
 
@@ -75,7 +75,7 @@ struct TimeStreamSceneView: UIViewRepresentable {
         return scnView
     }
     
-    func updateUIView(_ scnView: SCNView, context: Context) {
+    public func updateUIView(_ scnView: SCNView, context: Context) {
         scnView.scene = scene
 
         // allows the user to manipulate the camera

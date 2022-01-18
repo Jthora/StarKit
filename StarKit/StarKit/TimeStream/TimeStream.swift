@@ -7,6 +7,6 @@
 
 import Foundation
 
-class TimeStream {
+public class TimeStream {
     
 }

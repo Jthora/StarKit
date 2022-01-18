@@ -10,7 +10,7 @@ import SpriteKit
 import SwiftAA
 
 
-class StarGate {
+open class StarChartSprite {
     
     static var starChart = StarChart(date: Date(), coords: GeographicCoordinates(positivelyWestwardLongitude: 0, latitude: 0))
     
@@ -18,16 +18,16 @@ class StarGate {
 
 
 
-class StarChartSpriteNode:SKSpriteNode {
+open class StarChartSpriteNode:SKSpriteNode {
     
-    enum StarChartDiskImageType {
+    public enum StarChartDiskImageType {
         case linkRing
         case informal
         case formal_unlock
         case formal_power
         case differencial
         
-        var imageName:String {
+        public var imageName:String {
             switch self {
                 case .linkRing: return "cypherDisk_chevron36_linkRing"
                 case .informal: return "cypherDisk_chevron36_informal"
@@ -37,22 +37,22 @@ class StarChartSpriteNode:SKSpriteNode {
             }
         }
         
-        var cgImage:CGImage {
+        public var cgImage:CGImage {
             return UIImage(named: imageName)!.cgImage!
         }
         
-        var texture:SKTexture {
+        public var texture:SKTexture {
             return SKTexture(cgImage: cgImage)
         }
     }
     
-    enum StarChartDiskMaskType {
+    public enum StarChartDiskMaskType {
         case orb7_5
         case orb3_75
         case orb1_875
         case orb0_9375
         
-        var imageName:String {
+        public var imageName:String {
             switch self {
                 case .orb7_5: return "CosmicAlignment_Mask-7.5DegOrb"
                 case .orb3_75: return "CosmicAlignment_Mask-3.75DegOrb"
@@ -61,16 +61,16 @@ class StarChartSpriteNode:SKSpriteNode {
             }
         }
         
-        var cgImage:CGImage {
+        public var cgImage:CGImage {
             return UIImage(named: imageName)!.cgImage!
         }
         
-        var texture:SKTexture {
+        public var texture:SKTexture {
             return SKTexture(cgImage: cgImage)
         }
     }
     
-    static func create(imageType:StarChartDiskImageType, maskType:StarChartDiskMaskType, maskRotation:CGFloat = 0, size:CGSize = CGSize(width: 512, height: 512)) -> StarChartSpriteNode {
+    public static func create(imageType:StarChartDiskImageType, maskType:StarChartDiskMaskType, maskRotation:CGFloat = 0, size:CGSize = CGSize(width: 512, height: 512)) -> StarChartSpriteNode {
         
         let image:CGImage = imageType.cgImage
         let mask:CGImage = maskType.cgImage.imageRotatedByDegrees(degrees: maskRotation).convertToGrayScale()
@@ -82,7 +82,7 @@ class StarChartSpriteNode:SKSpriteNode {
         return sprite
     }
     
-    static func create(alignments:[StarChartAlignment], size:CGSize = CGSize(width:512, height:512)) -> StarChartSpriteNode {
+    public static func create(alignments:[StarChartAlignment], size:CGSize = CGSize(width:512, height:512)) -> StarChartSpriteNode {
         
         let width = Int(size.width)
         let height = Int(size.height)

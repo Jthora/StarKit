@@ -12,11 +12,11 @@ import SwiftAA
 extension JulianDay {
     
     // Compare Greater or Less Than for date comparison
-    func isAfter(_ otherDay:JulianDay) -> Bool {
+    public func isAfter(_ otherDay:JulianDay) -> Bool {
         return self.date.timeIntervalSince(otherDay.date) > 0
     }
     
-    func isBefore(_ otherDay:JulianDay) -> Bool {
+    public func isBefore(_ otherDay:JulianDay) -> Bool {
         return self.date.timeIntervalSince(otherDay.date) < 0
     }
 }

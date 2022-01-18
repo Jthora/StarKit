@@ -13,13 +13,13 @@ extension CGImage {
     
     // MARK: CGRect
     
-    var rect:CGRect {
+    public var rect:CGRect {
         return CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height))
     }
     
     // MARK: Rotate
     
-    func imageRotatedByDegrees(degrees: CGFloat) -> CGImage {
+    public func imageRotatedByDegrees(degrees: CGFloat) -> CGImage {
         //Create the bitmap context
         UIGraphicsBeginImageContext(CGSize(width: width, height: height))
         let context: CGContext = UIGraphicsGetCurrentContext()!
@@ -37,7 +37,7 @@ extension CGImage {
     
     // MARK: Grayscale
     
-    func convertToGrayScale() -> CGImage {
+    public func convertToGrayScale() -> CGImage {
         let imageRect:CGRect = CGRect(x:0, y:0, width:width, height: height)
         let colorSpace = CGColorSpaceCreateDeviceGray()
 
@@ -51,15 +51,15 @@ extension CGImage {
     
     // MARK: Merge Image
     
-    func mergeMask(with otherMask:CGImage) -> CGImage {
+    public func mergeMask(with otherMask:CGImage) -> CGImage {
         return self.merge(with: otherMask, colorSpace: CGColorSpaceCreateDeviceGray(), blendMode: .screen)
     }
 
-    func merge(with otherImage:CGImage, colorSpace:CGColorSpace? = nil, blendMode:CGBlendMode = .screen) -> CGImage {
+    public func merge(with otherImage:CGImage, colorSpace:CGColorSpace? = nil, blendMode:CGBlendMode = .screen) -> CGImage {
         return merge(with: [otherImage], colorSpace: colorSpace)
     }
     
-    func merge(with otherImages:[CGImage], colorSpace:CGColorSpace? = nil, blendMode:CGBlendMode = .screen) -> CGImage {
+    public func merge(with otherImages:[CGImage], colorSpace:CGColorSpace? = nil, blendMode:CGBlendMode = .screen) -> CGImage {
         
         let colorSpace = colorSpace ?? self.colorSpace!
         
@@ -80,17 +80,17 @@ extension CGImage {
     
     // MARK: Blank Image
     
-    static func blankMask(size:CGSize) -> CGImage {
+    public static func blankMask(size:CGSize) -> CGImage {
         return blankMask(width: Int(size.width), height: Int(size.height))
     }
     
-    static func blankMask(width:Int, height:Int) -> CGImage {
+    public static func blankMask(width:Int, height:Int) -> CGImage {
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue)
         let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: 8, bytesPerRow: width*4, space: CGColorSpaceCreateDeviceGray() , bitmapInfo: bitmapInfo.rawValue)
         return context!.makeImage()!
     }
     
-    static func blank(width:Int, height:Int) -> CGImage {
+    public static func blank(width:Int, height:Int) -> CGImage {
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)
         let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: 8, bytesPerRow: width*4, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: bitmapInfo.rawValue)
         return context!.makeImage()!

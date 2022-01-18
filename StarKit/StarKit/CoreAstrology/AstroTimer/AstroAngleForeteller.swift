@@ -14,9 +14,9 @@ import SwiftAA
 
 // First version is merely iterative, and just trys to calculate a close-enough
 
-class AstroAngleForeteller {
+public class AstroAngleForeteller {
     
-    enum ResonanceType {
+    public enum ResonanceType {
         case power // 1/1
         case bonds // 1/2
         case harmony // 1/3
@@ -29,7 +29,7 @@ class AstroAngleForeteller {
         case help // 1/12
         case adjustment // 5/12
         
-        func emoji() -> String {
+        public func emoji() -> String {
             switch self {
             case .power: return "🤩"
             case .bonds: return "😘"
@@ -45,7 +45,7 @@ class AstroAngleForeteller {
             }
         }
             
-        func name() -> String {
+        public func name() -> String {
             switch self {
             case .power: return "Power"
             case .bonds: return "Balance"
@@ -61,7 +61,7 @@ class AstroAngleForeteller {
             }
         }
             
-        static func create(from aspect:CoreAstrology.Aspect) -> ResonanceType? {
+        public static func create(from aspect:CoreAstrology.Aspect) -> ResonanceType? {
             switch aspect.relation.type {
             case .conjunction: return .power
             case .opposition: return .bonds
@@ -79,50 +79,50 @@ class AstroAngleForeteller {
         }
     }
     
-    struct AspectResult {
+    public struct AspectResult {
         
-        static let threshold:Double = 1
-        static let extreme:Double = 0.001
+        public static let threshold:Double = 1
+        public static let extreme:Double = 0.001
         
-        let aspect:CoreAstrology.Aspect
-        var angleSeparation:Degree
+        public let aspect:CoreAstrology.Aspect
+        public var angleSeparation:Degree
         
-        var isExtreme:Bool {
+        public var isExtreme:Bool {
             return angleSeparation.value < AspectResult.extreme
         }
         
-        var safeAngleSeparation:Degree {
+        public var safeAngleSeparation:Degree {
             return Degree(max(abs(angleSeparation.value), AspectResult.extreme))
         }
         
-        var powerLevel:Double {
+        public var powerLevel:Double {
             let orb = aspect.relation.type.orb.value
             return Double((orb - safeAngleSeparation.value) / orb)
         }
         
-        var resonanceScore:Double {
+        public var resonanceScore:Double {
             // Depending on the Planet Combination and type of Aspects, Resonances may go negative
             let planetaryAdjustment = AspectResult.threshold
             let score = (planetaryAdjustment + (1 - planetaryAdjustment) * powerLevel)
             return score
         }
         
-        var isSignificant:Bool {
+        public var isSignificant:Bool {
             return resonanceScore > AspectResult.threshold
         }
         
-        var resonanceType:ResonanceType? {
+        public var resonanceType:ResonanceType? {
             return ResonanceType.create(from: aspect)
         }
         
     }
     
-    struct AstrologicalReport {
-        let date:Date
-        let coordinates:[CoreAstrology.AspectBody:EquatorialCoordinates]
-        let aspectResults:[AspectResult]
+    public struct AstrologicalReport {
+        public let date:Date
+        public let coordinates:[CoreAstrology.AspectBody:EquatorialCoordinates]
+        public let aspectResults:[AspectResult]
         
-        init(date:Date) {
+        public init(date:Date) {
             self.date = date
             let julianDay = JulianDay(date)
             coordinates = [.sun:Sun(julianDay: julianDay).equatorialCoordinates,
@@ -138,11 +138,11 @@ class AstroAngleForeteller {
             aspectResults = AstrologicalReport.createAspectList(from: coordinates)
         }
         
-        func coordinate(for aspectBody:CoreAstrology.AspectBody) -> EquatorialCoordinates? {
+        public func coordinate(for aspectBody:CoreAstrology.AspectBody) -> EquatorialCoordinates? {
             return coordinates[aspectBody]
         }
         
-        static func createAspectList(from coordinates:[CoreAstrology.AspectBody:EquatorialCoordinates], getAll:Bool = false) -> [AspectResult] {
+        public static func createAspectList(from coordinates:[CoreAstrology.AspectBody:EquatorialCoordinates], getAll:Bool = false) -> [AspectResult] {
             
             var aspectList:[AspectResult] = []
             
@@ -160,15 +160,15 @@ class AstroAngleForeteller {
         }
     }
     
-    struct AstroAngleReport {
+    public struct AstroAngleReport {
         let afterDate:Date
         let aspects:[Date:CoreAstrology.Aspect]
     }
     
-    static let DEFAULT_ACCURACY:TimeInterval = (1/1000) // Down to milliseconds of accuracy
-    static let DEFAULT_INACCURACY:TimeInterval = 0.5
+    public static let DEFAULT_ACCURACY:TimeInterval = (1/1000) // Down to milliseconds of accuracy
+    public static let DEFAULT_INACCURACY:TimeInterval = 0.5
     
-    static func getFullReport(_ afterDate: Date) -> AstroAngleReport {
+    public static func getFullReport(_ afterDate: Date) -> AstroAngleReport {
         
         var aspects:[Date:CoreAstrology.Aspect] = [:]
         
@@ -187,7 +187,7 @@ class AstroAngleForeteller {
     }
     
     // This methods does the calculation and returns on a callback... cause this may take a couple iterations: a lot
-    static func whenIsTheDateOfThisNextAspectAlignment(after today:Date, aspect:CoreAstrology.Aspect, accuracy:TimeInterval = DEFAULT_ACCURACY) -> Date {
+    public static func whenIsTheDateOfThisNextAspectAlignment(after today:Date, aspect:CoreAstrology.Aspect, accuracy:TimeInterval = DEFAULT_ACCURACY) -> Date {
         p1TotalAngleTravel = 0
         startDate = today
         return getDateNextCloser(from: today, aspect: aspect, accuracy: accuracy)

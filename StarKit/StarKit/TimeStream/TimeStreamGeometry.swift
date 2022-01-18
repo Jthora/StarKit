@@ -8,8 +8,8 @@
 import SceneKit
 
 extension TimeStream {
-    class Geometry {
-        static func create(_ type:TimeStreamGeometryType) -> SCNGeometry {
+    open class Geometry {
+        public static func create(_ type:TimeStreamGeometryType) -> SCNGeometry {
             switch type {
             case .rectangle(let position, let width, let height):
                 return SCNGeometry.rectangle(position: position, width: width, height: height)

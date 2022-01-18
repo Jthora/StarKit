@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TimeStreamNodeType {
+public enum TimeStreamNodeType {
     case test
     case planetaryStrip
     case astrologicalMarking

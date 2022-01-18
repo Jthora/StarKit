@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum RetrogradeState {
+public enum RetrogradeState {
     case direct
     case retrograde
 }

@@ -12,31 +12,31 @@ import Foundation
 extension Date {
     
     // Daytime
-    var hour:Int {
+    public var hour:Int {
         return Calendar.current.component(.hour, from: self)
     }
-    var minute:Int {
+    public var minute:Int {
         return Calendar.current.component(.minute, from: self)
     }
-    var second:Int {
+    public var second:Int {
         return Calendar.current.component(.second, from: self)
     }
-    var fractionOfDay:Float {
+    public var fractionOfDay:Float {
         return (Float(hour) + (Float(minute)/60.0) + (Float(second)/3600.0)) / 24.0
     }
     
     //Yeartime
-    var daysThisYear:Int {
+    public var daysThisYear:Int {
         return Calendar.current.ordinality(of: .day, in: .year, for: self) ?? 1
     }
-    var fractionOfYear:Float {
+    public var fractionOfYear:Float {
         return Float(daysThisYear) / 365.0
     }
-    var fractionAfterWinterSolstice:Float {
+    public var fractionAfterWinterSolstice:Float {
         return Float(daysThisYear+10).truncatingRemainder(dividingBy: 365) / 365.0
     }
     
-    func resetTime(timedate:Date) -> Date {
+    public func resetTime(timedate:Date) -> Date {
         let df = DateFormatter()
         df.dateFormat = "dd MMM yyyy"
         var resultdate = Date()

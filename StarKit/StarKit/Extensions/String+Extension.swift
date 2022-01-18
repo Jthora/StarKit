@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     
-    func stringRemovingAfter(index: Int) -> String {
+    public func stringRemovingAfter(index: Int) -> String {
         var str = String(self)
         str.removeSubrange(str.index(str.startIndex, offsetBy: index)..<str.endIndex)
         return str

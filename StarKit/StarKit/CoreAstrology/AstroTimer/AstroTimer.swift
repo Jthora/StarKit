@@ -9,77 +9,108 @@
 import Foundation
 import SwiftAA
 
-protocol AstroTimerDelegate {
+// Astro Time Delegate
+public protocol AstroTimerDelegate {
     func didUpdate(_ astroTimer:AstroTimer, _ timePoint:AstroTimePoint)
 }
 
-class AstroTimer {
+// Astro Timer (used as a tool for scrying into StarCharts)
+open class AstroTimer {
     
-    var delegate:AstroTimerDelegate? = nil
+    // Hz
+    public typealias Hz = Double
     
-    var timeVector:AstroTimeVector? {
+    // Delegate
+    public var delegate:AstroTimerDelegate? = nil
+    
+    // Astro Time Vector
+    public var timeVector:AstroTimeVector? {
         if timePointHistory.count == Int(sampleRate) {
-            return AstroTimeVector(scale: sampleRate.toTimeInterval(), timePointA: timePointHistory.first!, timePointB: timePointHistory.last!)
+            return AstroTimeVector(timePointA: timePointHistory.first!, timePointB: timePointHistory.last!, timescale: sampleRate.toTimeInterval())
         }
         return nil
     }
-    var timePointHistory:[AstroTimePoint] = []
-    func addTimePointToHistory(_ timePoint:AstroTimePoint) {
+    
+    // Astro Time Points
+    public var timePointHistory:[AstroTimePoint] = []
+    public func addTimePointToHistory(_ timePoint:AstroTimePoint) {
         timePointHistory.append(timePoint)
         if timePointHistory.count > Int(sampleRate) {
             timePointHistory.remove(at: 0)
         }
     }
     
-    var sampleRate:Hz = 60
+    // Sample Rate
+    /// in Hz
+    public var sampleRate:Hz = 60
     
-    // distance range filters to define limits of how close planets must be (temporally or physically) to be added to the list of aspects
-    var filterAngleLimit:Degree?
-    var filterDistanceLimit:Meter?
-    var filterDistanceTime:TimeInterval?
+    // Filter
+    /// distance range filters to define limits of how close planets must be (temporally or physically) to be added to the list of aspects
+    public var filterAngleLimit:Degree?
+    public var filterDistanceLimit:Meter?
+    public var filterDistanceTime:TimeInterval?
     
-    var timer:Timer?
+    // Timer
+    public var timer:Timer?
     private func _timerUpdate(_ timer:Timer) {
         update()
     }
     
-    func update() {
+    // Update
+    public func update() {
         let timePoint = AstroTimePoint(date: Date())
         addTimePointToHistory(timePoint)
         delegate?.didUpdate(self, timePoint)
     }
     
-    func start(_ hz:Hz? = nil) {
+    // Start
+    public func start(_ hz:Hz? = nil) {
         guard timer?.isValid != true else { return }
         if let hz = hz { sampleRate = hz }
         timer = Timer.scheduledTimer(withTimeInterval: sampleRate.toTimeInterval(), repeats: true, block: _timerUpdate)
     }
     
-    func stop() {
+    // Stop
+    public func stop() {
         timer?.invalidate()
     }
     
-    func reset() {
+    // Reset
+    public func reset() {
         stop()
         start()
     }
-    
 }
 
-struct AstroTimeVector {
-    let scale:TimeInterval = 1
-    let moon:Degree
-    let mercury:Degree
-    let venus:Degree
-    let earth:Degree
-    let mars:Degree
-    let jupiter:Degree
-    let saturn:Degree
-    let uranus:Degree
-    let neptune:Degree
-    let pluto:Degree
+// AstroTimer.Hz conversions
+extension AstroTimer.Hz {
+    public func toTimeInterval() -> TimeInterval {
+        return self == 0 ? 0 : 1.0/self
+    }
+}
+extension TimeInterval {
+    public func toHz() -> AstroTimer.Hz {
+        return self/1.0
+    }
+}
+
+// Astro Time Vector (degrees traveled for a specific unit of time
+public struct AstroTimeVector {
+    public let timescale:TimeInterval
+    public let moon:Degree
+    public let mercury:Degree
+    public let venus:Degree
+    public let earth:Degree
+    public let mars:Degree
+    public let jupiter:Degree
+    public let saturn:Degree
+    public let uranus:Degree
+    public let neptune:Degree
+    public let pluto:Degree
     
-    init(scale:TimeInterval = 1, timePointA:AstroTimePoint, timePointB:AstroTimePoint) {
+    // Init with 2 Points
+    public init(timePointA:AstroTimePoint, timePointB:AstroTimePoint, timescale:TimeInterval = 1) {
+        self.timescale = timescale
         self.moon = timePointB.moon - timePointA.moon
         self.mercury = timePointB.mercury - timePointA.mercury
         self.venus = timePointB.venus - timePointA.venus
@@ -91,64 +122,34 @@ struct AstroTimeVector {
         self.neptune = timePointB.neptune - timePointA.neptune
         self.pluto = timePointB.pluto - timePointA.pluto
     }
-    
-    func degrees(for planet:Scaler.PlanetFocus) -> Degree {
-        switch planet {
-        case .moon: return moon
-        case .mercury: return mercury
-        case .venus: return venus
-        case .earth: return earth
-        case .mars: return mars
-        case .jupiter: return jupiter
-        case .saturn: return saturn
-        case .uranus: return uranus
-        case .neptune: return neptune
-        case .pluto: return pluto
-        }
-    }
 }
 
-struct AstroTimePoint {
-    let date:Date
-    let moon:Degree
-    let mercury:Degree
-    let venus:Degree
-    let earth:Degree
-    let mars:Degree
-    let jupiter:Degree
-    let saturn:Degree
-    let uranus:Degree
-    let neptune:Degree
-    let pluto:Degree
+// Astro Time Point (position at specific instance in time)
+public struct AstroTimePoint {
+    public let date:Date
+    public let moon:Degree
+    public let mercury:Degree
+    public let venus:Degree
+    public let earth:Degree
+    public let mars:Degree
+    public let jupiter:Degree
+    public let saturn:Degree
+    public let uranus:Degree
+    public let neptune:Degree
+    public let pluto:Degree
     
-    init(date:Date) {
+    // Init with Date
+    public init(date:Date) {
         self.date = date
-        self.moon = Astronomy.moonPhaseAngle(on: date)
-        self.mercury = Astronomy.orbitalProgression(.mercury, on: date)!
-        self.venus = Astronomy.orbitalProgression(.venus, on: date)!
-        self.earth = Astronomy.orbitalProgression(.earth, on: date)!
-        self.mars = Astronomy.orbitalProgression(.mars, on: date)!
-        self.jupiter = Astronomy.orbitalProgression(.jupiter, on: date)!
-        self.saturn = Astronomy.orbitalProgression(.saturn, on: date)!
-        self.uranus = Astronomy.orbitalProgression(.uranus, on: date)!
-        self.neptune = Astronomy.orbitalProgression(.neptune, on: date)!
-        self.pluto = Astronomy.orbitalProgression(.pluto, on: date)!
+        self.moon = CoreAstronomy.moonPhaseAngle(on: date)
+        self.mercury = CoreAstronomy.orbitalProgression(.mercury, on: date)!
+        self.venus = CoreAstronomy.orbitalProgression(.venus, on: date)!
+        self.earth = CoreAstronomy.orbitalProgression(.earth, on: date)!
+        self.mars = CoreAstronomy.orbitalProgression(.mars, on: date)!
+        self.jupiter = CoreAstronomy.orbitalProgression(.jupiter, on: date)!
+        self.saturn = CoreAstronomy.orbitalProgression(.saturn, on: date)!
+        self.uranus = CoreAstronomy.orbitalProgression(.uranus, on: date)!
+        self.neptune = CoreAstronomy.orbitalProgression(.neptune, on: date)!
+        self.pluto = CoreAstronomy.orbitalProgression(.pluto, on: date)!
     }
-    
-    func degrees(for planet:Scaler.PlanetFocus) -> Degree {
-        switch planet {
-        case .moon: return moon
-        case .mercury: return mercury
-        case .venus: return venus
-        case .earth: return earth
-        case .mars: return mars
-        case .jupiter: return jupiter
-        case .saturn: return saturn
-        case .uranus: return uranus
-        case .neptune: return neptune
-        case .pluto: return pluto
-        }
-    }
-    
-    
 }

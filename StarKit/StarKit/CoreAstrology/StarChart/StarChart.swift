@@ -65,7 +65,7 @@ open class StarChart {
         }
     }
     
-    func shouldSkipRedundant(_ first: CoreAstrology.AspectBody, _ second: CoreAstrology.AspectBody) -> Bool {
+    public func shouldSkipRedundant(_ first: CoreAstrology.AspectBody, _ second: CoreAstrology.AspectBody) -> Bool {
         switch first {
         case .ascendant: if second == .decendant { return true }
         case .decendant: if second == .ascendant { return true }
@@ -81,7 +81,7 @@ open class StarChart {
     }
     
     private var _sortedAspects:[StarChartAspect]?
-    func sortedAspects(filter:[CoreAstrology.AspectBody]? = nil) -> [StarChartAspect] {
+    public func sortedAspects(filter:[CoreAstrology.AspectBody]? = nil) -> [StarChartAspect] {
         
         var filteredAspects:[StarChartAspect]
         if let filter = filter {
@@ -135,7 +135,7 @@ open class StarChart {
         
     }
     
-    func highestAspectConcentration(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
+    public func highestAspectConcentration(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
         var highestConcentration:Double = 0
         for aspect in aspects {
             if aspect.relation.category == category,
@@ -148,14 +148,14 @@ open class StarChart {
         return highestConcentration
     }
     
-    func averageAspectConcentration(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
+    public func averageAspectConcentration(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
         
         
         let totalConcentration:Double = totalAspectConcentration(for: category, limitList: limitList)
         return totalConcentration / max(1,aspectCount(for: category, limitList: limitList))
     }
     
-    func totalAspectConcentration(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
+    public func totalAspectConcentration(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
         var totalConcentration:Double = 0
         for aspect in aspects {
             if aspect.relation.category == category,
@@ -167,7 +167,7 @@ open class StarChart {
         return totalConcentration
     }
     
-    func aspectCount(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
+    public func aspectCount(for category:CoreAstrology.AspectRelation.AspectRelationCategory, limitList:[CoreAstrology.AspectBody]? = nil) -> Double {
         var count:Double = 0
         for aspect in aspects {
             if aspect.relation.category == category,
@@ -179,16 +179,16 @@ open class StarChart {
         return count
     }
     
-    func produceNaturaIndex(limitList:[CoreAstrology.AspectBody]? = nil, limitType:[AstrologicalNodeType]? = nil) -> Arcana.Natura.Index {
+    public func produceNaturaIndex(limitList:[CoreAstrology.AspectBody]? = nil, limitType:[AstrologicalNodeType]? = nil) -> Arcana.Natura.Index {
         return Arcana.Natura.Index(alignments: self.alignments, limitList: limitList, limitType: limitType)
     }
     
     
-    func produceZodiacIndex(limitList:[CoreAstrology.AspectBody]? = nil, limitType:[AstrologicalNodeType]? = nil) -> Arcana.Zodiac.Index {
+    public func produceZodiacIndex(limitList:[CoreAstrology.AspectBody]? = nil, limitType:[AstrologicalNodeType]? = nil) -> Arcana.Zodiac.Index {
         return Arcana.Zodiac.Index(alignments: self.alignments, limitList: limitList, limitType: limitType)
     }
     
-    func globalAbsoluteGravimetricMagnitude(includeSun:Bool = false) -> Double {
+    public func globalAbsoluteGravimetricMagnitude(includeSun:Bool = false) -> Double {
         var absoluteMagnitude:Double = 0
         for aspectBody in CoreAstrology.AspectBody.allCases where aspectBody.hasGravity == true && includeSun ? true : aspectBody != .sun {
             absoluteMagnitude += aspectBody.gravimetricForceOnEarth(date: date) ?? 0
@@ -197,12 +197,12 @@ open class StarChart {
     }
     
     // use ecliptic
-    func globalNetGravimetricMagnitude(includeSun:Bool = false) -> Double {
+    public func globalNetGravimetricMagnitude(includeSun:Bool = false) -> Double {
         let tensor = globalNetGravimetricTensor(includeSun: includeSun)
         return tensor.magnitude
     }
     
-    func globalNetGravimetricTensor(includeSun:Bool = false) -> CoreAstrology.GravimetricTensor {
+    public func globalNetGravimetricTensor(includeSun:Bool = false) -> CoreAstrology.GravimetricTensor {
         var globalGravitationalTensor = CoreAstrology.GravimetricTensor.empty
         for aspectBody in CoreAstrology.AspectBody.allCases where aspectBody.hasGravity == true && includeSun ? true : aspectBody != .sun {
             globalGravitationalTensor += aspectBody.gravimetricTensor(date: date)
@@ -210,7 +210,7 @@ open class StarChart {
         return globalGravitationalTensor
     }
     
-    func localAbsoluteGravimetricTensor(bodyMass:Kilogram = 155, geographicCoordinates: GeographicCoordinates, date: Date) -> CoreAstrology.GravimetricTensor {
+    public func localAbsoluteGravimetricTensor(bodyMass:Kilogram = 155, geographicCoordinates: GeographicCoordinates, date: Date) -> CoreAstrology.GravimetricTensor {
         var localGravitationalTensor = CoreAstrology.GravimetricTensor.empty
         
         // Slighly Less Accurate, but effective enough... Instead just add Earth Tensor using IC (opposite of mid-heaven) with Earth Gravity for Magnitude
@@ -226,7 +226,7 @@ open class StarChart {
         return localGravitationalTensor
     }
     
-    func localNetGravimetricTensor(bodyMass:Kilogram = 155, geographicCoordinates: GeographicCoordinates, date: Date) -> CoreAstrology.GravimetricTensor {
+    public func localNetGravimetricTensor(bodyMass:Kilogram = 155, geographicCoordinates: GeographicCoordinates, date: Date) -> CoreAstrology.GravimetricTensor {
         var localGravitationalTensor = CoreAstrology.GravimetricTensor.empty
         
         // Use a Geo-Location Coordinate and Earth Date
@@ -244,7 +244,7 @@ open class StarChart {
     // PERSONAL -- Individual Instance Relative to Earth Surface Location
     // INTERPERSONAL
     
-    func produceGravimetricMap() -> [String:Double] {
+    public func produceGravimetricMap() -> [String:Double] {
         var gravimetricMap:[String:Double] = [:]
         for aspectBody in CoreAstrology.AspectBody.allCases {
             
@@ -257,7 +257,7 @@ open class StarChart {
     }
     
     // For Machine Learning and Persistant Store of Alignment Relation Data
-    func produceAlignmentMap(planetsOnly:Bool = false) -> [String:Double] {
+    public func produceAlignmentMap(planetsOnly:Bool = false) -> [String:Double] {
         var alignmentMap:[String:Double] = [:]
         for aspectBody in CoreAstrology.AspectBody.allCases {
             
@@ -277,7 +277,7 @@ open class StarChart {
     }
     
     // For Machine Learning and Persistant Store of Inter-Aspect Computation Data
-    func produceAspectMap() -> [String:Double] {
+    public func produceAspectMap() -> [String:Double] {
         var aspectMap:[String:Double] = [:]
         for primaryBody in CoreAstrology.AspectBody.allCases {
             
@@ -301,13 +301,13 @@ open class StarChart {
         return aspectMap
     }
     
-    func duplicate(celestialOffset: CoreAstrology.Ayanamsa? = nil) -> StarChart {
+    public func duplicate(celestialOffset: CoreAstrology.Ayanamsa? = nil) -> StarChart {
         let newStarChart = StarChart(date: self.date, coords: self.coords, celestialOffset: celestialOffset ?? self.celestialOffset)
         return newStarChart
     }
     
     // 3rd Gen Arkana Natura
-    func cosmicAlignment() -> CosmicAlignment {
+    public func cosmicAlignment() -> CosmicAlignment {
         return CosmicAlignment(self)
     }
 }

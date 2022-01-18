@@ -9,14 +9,14 @@
 import SceneKit
 
 extension SCNVector3 {
-    static var center:SCNVector3 {
+    public static var center:SCNVector3 {
         return SCNVector3(0, 0, 0)
     }
 }
 
 
 extension SCNNode {
-    func animate(position:SCNVector3, duration:CFTimeInterval = 0.5, animationKey:String = "defaultPositionAnimation") {
+    public func animate(position:SCNVector3, duration:CFTimeInterval = 0.5, animationKey:String = "defaultPositionAnimation") {
         CATransaction.begin()
         CATransaction.setCompletionBlock {
             self.position = position
@@ -31,7 +31,7 @@ extension SCNNode {
         CATransaction.commit()
     }
     
-    func animate(rotation:SCNVector4, duration:CFTimeInterval = 0.5, animationKey:String = "defaultRotationAnimation") {
+    public func animate(rotation:SCNVector4, duration:CFTimeInterval = 0.5, animationKey:String = "defaultRotationAnimation") {
         CATransaction.begin()
         CATransaction.setCompletionBlock {
             self.rotation = rotation

@@ -8,9 +8,9 @@
 import SwiftUI
 import SceneKit
 
-struct TimeStreamView: View {
+public struct TimeStreamView: View {
 
-    var body: some View {
+    public var body: some View {
         TimeStreamSceneView()
     }
 }

@@ -7,22 +7,22 @@
 
 import Foundation
 
-class CosmicAlignment {
+open class CosmicAlignment {
     
     // A Measure of the 4 Arcane Elements
     
     // Primary Elements (4)
-    var fire:Double = 0
-    var air:Double = 0
-    var earth:Double = 0
-    var water:Double = 0
+    public var fire:Double = 0
+    public var air:Double = 0
+    public var earth:Double = 0
+    public var water:Double = 0
     
     // total raw harmonic power
-    var total:Double {
+    public var total:Double {
         return fire + air + earth + water
     }
     
-    init(_ starChart:StarChart) {
+    public init(_ starChart:StarChart) {
         for alignment in starChart.alignments {
             let chevron = alignment.value.createChevron()
             switch chevron.element {
@@ -40,7 +40,7 @@ class CosmicAlignment {
         }
     }
     
-    func level(_ elementReading:ElementReading, _ calc:ElementCalculation) -> Float {
+    public func level(_ elementReading:ElementReading, _ calc:ElementCalculation) -> Float {
         var level:Double = 0
         switch elementReading {
         case .fire: level = fire/total
@@ -64,14 +64,14 @@ class CosmicAlignment {
     }
     
     // Devine Elements (2)
-    func aether() -> Double  {
+    public func aether() -> Double  {
         // all for elements at equilibrium value
         // Resonance
         
         return 1 - nether()
     }
     
-    func nether() -> Double  {
+    public func nether() -> Double  {
         // amount of difference between elements and how close that is to net zero value
         // Disonance
         guard total != 0 else {
@@ -97,7 +97,7 @@ class CosmicAlignment {
     }
     
     // 3rd Order Elements (4)
-    func holy(_ calc: ElementCalculation) -> Double {
+    public func holy(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let fireRatio = fire/total
@@ -121,7 +121,7 @@ class CosmicAlignment {
         }
     }
     
-    func evil(_ calc: ElementCalculation) -> Double {
+    public func evil(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let waterRatio = water/total
@@ -145,7 +145,7 @@ class CosmicAlignment {
         }
     }
     
-    func spirit(_ calc: ElementCalculation) -> Double {
+    public func spirit(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let waterRatio = water/total
@@ -169,7 +169,7 @@ class CosmicAlignment {
         }
     }
     
-    func body(_ calc: ElementCalculation) -> Double {
+    public func body(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let waterRatio = water/total
@@ -196,7 +196,7 @@ class CosmicAlignment {
     // 2nd Order Elements (6)
     
     // Fire and Water
-    func chaos(_ calc: ElementCalculation) -> Double {
+    public func chaos(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let waterRatio = water/total
@@ -217,7 +217,7 @@ class CosmicAlignment {
         }
     }
     
-    func order(_ calc: ElementCalculation) -> Double {
+    public func order(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let earthRatio = earth/total
@@ -238,7 +238,7 @@ class CosmicAlignment {
         }
     }
     
-    func alpha(_ calc: ElementCalculation) -> Double {
+    public func alpha(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let fireRatio = fire/total
@@ -259,7 +259,7 @@ class CosmicAlignment {
         }
     }
     
-    func omega(_ calc: ElementCalculation) -> Double {
+    public func omega(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let earthRatio = earth/total
@@ -280,7 +280,7 @@ class CosmicAlignment {
         }
     }
     
-    func core(_ calc: ElementCalculation) -> Double {
+    public func core(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let earthRatio = earth/total
@@ -301,7 +301,7 @@ class CosmicAlignment {
         }
     }
     
-    func void(_ calc: ElementCalculation) -> Double {
+    public func void(_ calc: ElementCalculation) -> Double {
         
         // Ratios
         let waterRatio = water/total
@@ -322,13 +322,13 @@ class CosmicAlignment {
         }
     }
     
-    enum ElementCalculation {
+    public enum ElementCalculation {
         case baseline
         case expected
         case potential
     }
     
-    enum ElementReading {
+    public enum ElementReading {
         case fire
         case air
         case water

@@ -8,8 +8,8 @@
 import SceneKit
 
 extension TimeStream {
-    class Material {
-        static func create(_ type:TimeStreamMaterialType) -> SCNMaterial {
+    open class Material {
+        public static func create(_ type:TimeStreamMaterialType) -> SCNMaterial {
             switch type {
             case .test:
                 let material = SCNMaterial()

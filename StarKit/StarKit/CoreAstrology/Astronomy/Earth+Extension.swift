@@ -13,7 +13,7 @@ import Darwin
 
 extension Earth {
     
-    enum House:Double {
+    public enum House:Double {
         case first = 3  // ASC
         case second = 4
         case third = 5
@@ -27,7 +27,7 @@ extension Earth {
         case eleventh = 1
         case twelveth = 2
         
-        var technicalDegree:Degree {
+        public var technicalDegree:Degree {
             switch self {
             case .first, .seventh: return 90
             case .second, .eighth: return 120
@@ -38,7 +38,7 @@ extension Earth {
             }
         }
         
-        var factor:Double {
+        public var factor:Double {
             switch self {
             case .eleventh, .fifth: return 1.5
             case .twelveth, .sixth: return 3
@@ -50,11 +50,11 @@ extension Earth {
     }
     
     
-    func getLocalSiderealTime(coords:GeographicCoordinates) -> Degree {
+    public func getLocalSiderealTime(coords:GeographicCoordinates) -> Degree {
         return self.julianDay.meanLocalSiderealTime(longitude: coords.longitude).inDegrees
     }
 
-    func getMidHeaven(coords:GeographicCoordinates) -> Degree {
+    public func getMidHeaven(coords:GeographicCoordinates) -> Degree {
         var LST = getLocalSiderealTime(coords: coords)
         if LST < 0 {
             LST += 360
@@ -73,7 +73,7 @@ extension Earth {
         return MCdeg
     }
     
-    func getASC(coords:GeographicCoordinates) -> Degree {
+    public func getASC(coords:GeographicCoordinates) -> Degree {
         
         let precession = self.position().precessedCoordinates(to: .epochOfTheDate(self.julianDay))
         let position = self.position()
@@ -115,7 +115,7 @@ extension Earth {
     }
     
     
-    func acot(_ x : Double) -> Double {
+    public func acot(_ x : Double) -> Double {
         if x > 1.0 {
             return atan(1.0/x)
         } else if x < -1.0 {
@@ -125,7 +125,7 @@ extension Earth {
         }
     }
     
-    func getCelestialLongitudeOfHouseCusp(house: House, coords:GeographicCoordinates) -> Degree {
+    public func getCelestialLongitudeOfHouseCusp(house: House, coords:GeographicCoordinates) -> Degree {
         
         if house == .first { return getASC(coords: coords) }
         else if house == .seventh { return Degree((getASC(coords: coords).value + 180).truncatingRemainder(dividingBy: 360)) }
@@ -176,7 +176,7 @@ extension Earth {
     }
     
     
-    func isNightTime(coords:GeographicCoordinates) -> Bool? {
+    public func isNightTime(coords:GeographicCoordinates) -> Bool? {
         return nil
 //        let twilights = self.twilights(forSunAltitude: TwilightSunAltitude.astronomical.rawValue, coordinates: coords)
 //        guard let rise = twilights.rise,
@@ -192,7 +192,7 @@ extension Earth {
     // Night Births: Ascendant + Sun – Moon
     
     // X Cross Circle
-    func getPartOfFortune(coords:GeographicCoordinates) -> Degree? {
+    public func getPartOfFortune(coords:GeographicCoordinates) -> Degree? {
         
         guard let isNightTime:Bool = isNightTime(coords:coords) else {return nil}
         
@@ -211,7 +211,7 @@ extension Earth {
     // Night chart: Ascendant + Moon - Sun
     
     // The Power of the Spiral
-    func getPartOfSpirit(coords:GeographicCoordinates) -> Degree? {
+    public func getPartOfSpirit(coords:GeographicCoordinates) -> Degree? {
         
         guard let isNightTime:Bool = isNightTime(coords:coords) else {return nil}
         
@@ -230,7 +230,7 @@ extension Earth {
     // Night chart: ASC + Spirit - Venus
     
     // The Power of the Spiral
-    func getPartOfEros(coords:GeographicCoordinates) -> Degree? {
+    public func getPartOfEros(coords:GeographicCoordinates) -> Degree? {
         
         guard let isNightTime:Bool = isNightTime(coords:coords) else {return nil}
         

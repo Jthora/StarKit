@@ -8,13 +8,13 @@
 import Foundation
 
 
-struct PlanetState {
-    let date:Date?
-    let degrees:Double
-    let retrogradeState:RetrogradeState
-    let speed:Double
+public struct PlanetState {
+    public let date:Date?
+    public let degrees:Double
+    public let retrogradeState:RetrogradeState
+    public let speed:Double
     
-    static func from(_ starCharts:[StarChart]) -> [CoreAstrology.AspectBody:[PlanetState]] {
+    public static func from(_ starCharts:[StarChart]) -> [CoreAstrology.AspectBody:[PlanetState]] {
         
         // Ensure StarCharts are Ordered
         let orderedStarCharts = starCharts.sorted { starChartA, starChartB in

@@ -7,6 +7,6 @@
 
 import SceneKit
 
-enum TimeStreamGeometryType {
+public enum TimeStreamGeometryType {
     case rectangle(position: SCNVector3, width: Float, height: Float)
 }

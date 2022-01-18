@@ -9,16 +9,16 @@ import UIKit
 import SpriteKit
 
 
-struct PsionoStreamImageStrip {
-    var cgImage:CGImage
-    let planet:CoreAstrology.AspectBody
-    let retrograde:Bool
-    let retrogradeInverted:Bool
-    let solidColors:Bool
-    var width = 1
-    let height = 1
+public struct PsionoStreamImageStrip {
+    public var cgImage:CGImage
+    public let planet:CoreAstrology.AspectBody
+    public let retrograde:Bool
+    public let retrogradeInverted:Bool
+    public let solidColors:Bool
+    public var width = 1
+    public let height = 1
     
-    func makeSprite(size:CGSize) -> SKSpriteNode {
+    public func makeSprite(size:CGSize) -> SKSpriteNode {
         let texture = SKTexture(cgImage: cgImage)
         let sprite = SKSpriteNode(texture: texture, color: .clear, size: size)
         return sprite

@@ -8,14 +8,13 @@
 import Foundation
 
 let SELECTABLE_ASPECT_BODIES:[CoreAstrology.AspectBody] = [.ascendant, .midheaven, .lunarAscendingNode, .lunarPerigee, .moon, .sun, .mercury, .venus, .mars, .jupiter, .saturn, .uranus, .neptune] // YUGA CYCLE!
-
-class StarChartRegistry {
+open class StarChartRegistry {
     
-    static let main:StarChartRegistry = StarChartRegistry()
+    public static let main:StarChartRegistry = StarChartRegistry()
     
-    var current:StarChart = StarChart(date: Date())
-    var charts:[StarChart] = []
+    public var current:StarChart = StarChart(date: Date())
+    public var charts:[StarChart] = []
     
     // persistant store
-    var selectedAspectBodies:[CoreAstrology.AspectBody] = SELECTABLE_ASPECT_BODIES
+    public var selectedAspectBodies:[CoreAstrology.AspectBody] = SELECTABLE_ASPECT_BODIES
 }

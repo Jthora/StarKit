@@ -9,9 +9,9 @@ import SceneKit
 
 // Triangles
 extension SCNGeometry {
-    static let triangleIndices: [Int32] = [0, 1, 2]
+    public static let triangleIndices: [Int32] = [0, 1, 2]
     
-    static func triangle(v1: SCNVector3, v2: SCNVector3, v3: SCNVector3) -> SCNGeometry {
+    public static func triangle(v1: SCNVector3, v2: SCNVector3, v3: SCNVector3) -> SCNGeometry {
         let source = SCNGeometrySource(vertices: [v1, v2, v3])
         let element = SCNGeometryElement(indices: triangleIndices, primitiveType: .triangles)
 
@@ -22,23 +22,23 @@ extension SCNGeometry {
 // Quads
 extension SCNGeometry {
     
-    static let textureCord = [
+    public static let textureCord = [
         CGPoint(x: 1, y: 1),
         CGPoint(x: 0, y: 1),
         CGPoint(x: 0, y: 0),
         CGPoint(x: 1, y: 0),
     ]
 
-    static let indices: [CInt] = [
+    public static let indices: [CInt] = [
         0, 2, 3,
         0, 1, 2
     ]
     
-    static func square(position:SCNVector3, size:Float) -> SCNGeometry {
+    public static func square(position:SCNVector3, size:Float) -> SCNGeometry {
         return rectangle(position: position, width: size, height: size)
     }
     
-    static func rectangle(position:SCNVector3, width:Float, height:Float) -> SCNGeometry {
+    public static func rectangle(position:SCNVector3, width:Float, height:Float) -> SCNGeometry {
         return SCNGeometry.quad(v1: SCNVector3(x: position.x - (width/2),
                                                y: position.y - (height/2),
                                                z: position.z),
@@ -53,7 +53,7 @@ extension SCNGeometry {
                                                z: position.z))
     }
     
-    static func quad(v1:SCNVector3, v2:SCNVector3, v3:SCNVector3, v4:SCNVector3) -> SCNGeometry {
+    public static func quad(v1:SCNVector3, v2:SCNVector3, v3:SCNVector3, v4:SCNVector3) -> SCNGeometry {
 
         let verticesPosition = [v1, v2, v3, v4]
 

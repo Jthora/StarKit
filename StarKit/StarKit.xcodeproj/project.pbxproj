@@ -15,7 +15,6 @@
 		FA0D89212796397800A2D15D /* StarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0D89132796397800A2D15D /* StarKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA7CE82127972E5C00C70F78 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7DE27972E5B00C70F78 /* Utils.swift */; };
 		FA7CE82227972E5C00C70F78 /* SCNGeometryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E027972E5B00C70F78 /* SCNGeometryExtension.swift */; };
-		FA7CE82327972E5C00C70F78 /* NASAAstronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E327972E5C00C70F78 /* NASAAstronomy.swift */; };
 		FA7CE82427972E5C00C70F78 /* Earth+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E427972E5C00C70F78 /* Earth+Extension.swift */; };
 		FA7CE82527972E5C00C70F78 /* JulianDay+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E527972E5C00C70F78 /* JulianDay+Extension.swift */; };
 		FA7CE82627972E5C00C70F78 /* Astronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E627972E5C00C70F78 /* Astronomy.swift */; };
@@ -25,9 +24,7 @@
 		FA7CE82A27972E5C00C70F78 /* StarChartSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7EC27972E5C00C70F78 /* StarChartSprite.swift */; };
 		FA7CE82B27972E5C00C70F78 /* StarChartGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7ED27972E5C00C70F78 /* StarChartGenerator.swift */; };
 		FA7CE82C27972E5C00C70F78 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7EF27972E5C00C70F78 /* Regex.swift */; };
-		FA7CE82D27972E5C00C70F78 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F127972E5C00C70F78 /* Math.swift */; };
 		FA7CE82E27972E5C00C70F78 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F327972E5C00C70F78 /* Time.swift */; };
-		FA7CE82F27972E5C00C70F78 /* Scaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F527972E5C00C70F78 /* Scaler.swift */; };
 		FA7CE83027972E5C00C70F78 /* AstroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F727972E5C00C70F78 /* AstroTimer.swift */; };
 		FA7CE83127972E5C00C70F78 /* AstroUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F827972E5C00C70F78 /* AstroUtils.swift */; };
 		FA7CE83227972E5C00C70F78 /* AstroAngleForeteller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F927972E5C00C70F78 /* AstroAngleForeteller.swift */; };
@@ -91,7 +88,6 @@
 		FA0D891F2796397800A2D15D /* StarKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarKitTests.swift; sourceTree = "<group>"; };
 		FA7CE7DE27972E5B00C70F78 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FA7CE7E027972E5B00C70F78 /* SCNGeometryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNGeometryExtension.swift; sourceTree = "<group>"; };
-		FA7CE7E327972E5C00C70F78 /* NASAAstronomy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASAAstronomy.swift; sourceTree = "<group>"; };
 		FA7CE7E427972E5C00C70F78 /* Earth+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Earth+Extension.swift"; sourceTree = "<group>"; };
 		FA7CE7E527972E5C00C70F78 /* JulianDay+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JulianDay+Extension.swift"; sourceTree = "<group>"; };
 		FA7CE7E627972E5C00C70F78 /* Astronomy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Astronomy.swift; sourceTree = "<group>"; };
@@ -101,9 +97,7 @@
 		FA7CE7EC27972E5C00C70F78 /* StarChartSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarChartSprite.swift; sourceTree = "<group>"; };
 		FA7CE7ED27972E5C00C70F78 /* StarChartGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarChartGenerator.swift; sourceTree = "<group>"; };
 		FA7CE7EF27972E5C00C70F78 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		FA7CE7F127972E5C00C70F78 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FA7CE7F327972E5C00C70F78 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
-		FA7CE7F527972E5C00C70F78 /* Scaler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scaler.swift; sourceTree = "<group>"; };
 		FA7CE7F727972E5C00C70F78 /* AstroTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroTimer.swift; sourceTree = "<group>"; };
 		FA7CE7F827972E5C00C70F78 /* AstroUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroUtils.swift; sourceTree = "<group>"; };
 		FA7CE7F927972E5C00C70F78 /* AstroAngleForeteller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroAngleForeteller.swift; sourceTree = "<group>"; };
@@ -252,9 +246,7 @@
 				FA7CE7E727972E5C00C70F78 /* TextureGeneration */,
 				FA7CE7E927972E5C00C70F78 /* StarChart */,
 				FA7CE7EE27972E5C00C70F78 /* Regex */,
-				FA7CE7F027972E5C00C70F78 /* Math */,
 				FA7CE7F227972E5C00C70F78 /* Time */,
-				FA7CE7F427972E5C00C70F78 /* Scaler */,
 				FA7CE7F627972E5C00C70F78 /* AstroTimer */,
 				FA7CE7FA27972E5C00C70F78 /* Psionics */,
 				FA7CE7FD27972E5C00C70F78 /* Astrology */,
@@ -265,7 +257,6 @@
 		FA7CE7E227972E5C00C70F78 /* Astronomy */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CE7E327972E5C00C70F78 /* NASAAstronomy.swift */,
 				FA7CE7E427972E5C00C70F78 /* Earth+Extension.swift */,
 				FA7CE7E527972E5C00C70F78 /* JulianDay+Extension.swift */,
 				FA7CE7E627972E5C00C70F78 /* Astronomy.swift */,
@@ -300,28 +291,12 @@
 			path = Regex;
 			sourceTree = "<group>";
 		};
-		FA7CE7F027972E5C00C70F78 /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				FA7CE7F127972E5C00C70F78 /* Math.swift */,
-			);
-			path = Math;
-			sourceTree = "<group>";
-		};
 		FA7CE7F227972E5C00C70F78 /* Time */ = {
 			isa = PBXGroup;
 			children = (
 				FA7CE7F327972E5C00C70F78 /* Time.swift */,
 			);
 			path = Time;
-			sourceTree = "<group>";
-		};
-		FA7CE7F427972E5C00C70F78 /* Scaler */ = {
-			isa = PBXGroup;
-			children = (
-				FA7CE7F527972E5C00C70F78 /* Scaler.swift */,
-			);
-			path = Scaler;
 			sourceTree = "<group>";
 		};
 		FA7CE7F627972E5C00C70F78 /* AstroTimer */ = {
@@ -605,7 +580,6 @@
 				FA7CE82527972E5C00C70F78 /* JulianDay+Extension.swift in Sources */,
 				FA7CE83F27972E5C00C70F78 /* Chevron.swift in Sources */,
 				FA7CE84827972E5C00C70F78 /* TimeStreamMaterialType.swift in Sources */,
-				FA7CE82F27972E5C00C70F78 /* Scaler.swift in Sources */,
 				FA7CE84927972E5C00C70F78 /* TimeStream.swift in Sources */,
 				FA7CE82827972E5C00C70F78 /* StarChartRegistry.swift in Sources */,
 				FA7CE82427972E5C00C70F78 /* Earth+Extension.swift in Sources */,
@@ -623,7 +597,6 @@
 				FA7CE83A27972E5C00C70F78 /* Natura.swift in Sources */,
 				FA7CE84C27972E5C00C70F78 /* TimeStreamMaterial.swift in Sources */,
 				FA7CE84F27972E5C00C70F78 /* TimeStreamGeometryType.swift in Sources */,
-				FA7CE82327972E5C00C70F78 /* NASAAstronomy.swift in Sources */,
 				FA7CE84127972E5C00C70F78 /* Date+Extension.swift in Sources */,
 				FA7CE84427972E5C00C70F78 /* SceneKit+Extension.swift in Sources */,
 				FA7CE83227972E5C00C70F78 /* AstroAngleForeteller.swift in Sources */,
@@ -631,7 +604,6 @@
 				FA7CE82A27972E5C00C70F78 /* StarChartSprite.swift in Sources */,
 				FA7CE83627972E5C00C70F78 /* AstrologicalNode.swift in Sources */,
 				FA7CE83427972E5C00C70F78 /* PsionicImageGenerator.swift in Sources */,
-				FA7CE82D27972E5C00C70F78 /* Math.swift in Sources */,
 				FA7CE83527972E5C00C70F78 /* Astrology.swift in Sources */,
 				FA7CE83D27972E5C00C70F78 /* Arcana.swift in Sources */,
 				FA7CE83327972E5C00C70F78 /* PsionoStreamImageStrip.swift in Sources */,

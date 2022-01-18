@@ -8,8 +8,8 @@
 import SceneKit
 
 extension TimeStream {
-    class Node {
-        static func create(_ type:TimeStreamNodeType, position:SCNVector3, width:Float, height:Float) -> SCNNode {
+    open class Node {
+        public static func create(_ type:TimeStreamNodeType, position:SCNVector3, width:Float, height:Float) -> SCNNode {
             switch type {
             case .test:
                 let geometry = TimeStream.Geometry.create(.rectangle(position: position,width: width,height: height))

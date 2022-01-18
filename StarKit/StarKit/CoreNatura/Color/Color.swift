@@ -7,14 +7,14 @@
 
 import UIKit
 
-struct RGYBColor
+public struct RGYBColor
 {
-    var red:CGFloat = 0
-    var green:CGFloat = 0
-    var yellow:CGFloat = 0
-    var blue:CGFloat = 0
+    public var red:CGFloat = 0
+    public var green:CGFloat = 0
+    public var yellow:CGFloat = 0
+    public var blue:CGFloat = 0
     
-    init(degrees:Double, solidColors:Bool = false) {
+    public init(degrees:Double, solidColors:Bool = false) {
         
             
             // 0 to 120 (red 0.5 to red 0.5)
@@ -76,14 +76,14 @@ struct RGYBColor
     }
 }
 
-struct RGBAColor
+public struct RGBAColor
 {
-    var Red:   UInt8 = 0
-    var Green: UInt8 = 0
-    var Blue:  UInt8 = 0
-    var Alpha: UInt8 = 255
+    public var Red:   UInt8 = 0
+    public var Green: UInt8 = 0
+    public var Blue:  UInt8 = 0
+    public var Alpha: UInt8 = 255
     
-    init(degrees:Double, invert:Bool = false, solidColors:Bool = false) {
+    public init(degrees:Double, invert:Bool = false, solidColors:Bool = false) {
         
         let rgybColor = RGYBColor(degrees: degrees, solidColors: solidColors)
         
@@ -98,22 +98,22 @@ struct RGBAColor
         }
     }
     
-    init(red:UInt8 = 0, green:UInt8 = 0, blue:UInt8 = 0, alpha:UInt8 = 255) {
+    public init(red:UInt8 = 0, green:UInt8 = 0, blue:UInt8 = 0, alpha:UInt8 = 255) {
         Red = red
         Green = green
         Blue = blue
         Alpha = alpha
     }
     
-    static var black:RGBAColor {
+    public static var black:RGBAColor {
         return RGBAColor(red: 0, green: 0, blue: 0, alpha: 255)
     }
     
-    static var white:RGBAColor {
+    public static var white:RGBAColor {
         return RGBAColor(red: 255, green: 255, blue: 255, alpha: 255)
     }
     
-    static var clear:RGBAColor {
+    public static var clear:RGBAColor {
         return RGBAColor(red: 255, green: 255, blue: 255, alpha: 0)
     }
 }

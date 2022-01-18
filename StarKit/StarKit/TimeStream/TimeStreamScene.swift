@@ -7,7 +7,7 @@
 
 import SceneKit
 
-class TimeStreamScene : SCNScene {
+open class TimeStreamScene : SCNScene {
     
     
 }
