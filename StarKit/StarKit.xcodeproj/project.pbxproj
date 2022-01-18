@@ -61,7 +61,7 @@
 		FA7CE85127972E5C00C70F78 /* TimeStreamGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */; };
 		FA7CE85227972E5C00C70F78 /* TimeStreamScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */; };
 		FA7CE8542797313800C70F78 /* StarKitAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE8532797313800C70F78 /* StarKitAssets.swift */; };
-		FA7CE856279732EC00C70F78 /* StarKitAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CE855279732EC00C70F78 /* StarKitAssets.xcassets */; };
+		FA7CE8622797687100C70F78 /* StarKitAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CE8612797687100C70F78 /* StarKitAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,7 +134,7 @@
 		FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamGeometry.swift; sourceTree = "<group>"; };
 		FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamScene.swift; sourceTree = "<group>"; };
 		FA7CE8532797313800C70F78 /* StarKitAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarKitAssets.swift; sourceTree = "<group>"; };
-		FA7CE855279732EC00C70F78 /* StarKitAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StarKitAssets.xcassets; sourceTree = SOURCE_ROOT; };
+		FA7CE8612797687100C70F78 /* StarKitAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = StarKitAssets.xcassets; path = StarKit/StarKitAssets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +224,7 @@
 		FA7CE7DC27972E5B00C70F78 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CE855279732EC00C70F78 /* StarKitAssets.xcassets */,
+				FA7CE8612797687100C70F78 /* StarKitAssets.xcassets */,
 				FA7CE8532797313800C70F78 /* StarKitAssets.swift */,
 				FA7CE7DE27972E5B00C70F78 /* Utils.swift */,
 			);
@@ -479,7 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7CE856279732EC00C70F78 /* StarKitAssets.xcassets in Resources */,
+				FA7CE8622797687100C70F78 /* StarKitAssets.xcassets in Resources */,
 				FA7CE84E27972E5C00C70F78 /* TimeStreamAssets.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = StarKit/StarKitAssets.xcassets;
 				DEVELOPMENT_TEAM = H4H7UN3F3K;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -790,6 +791,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = StarKit/StarKitAssets.xcassets;
 				DEVELOPMENT_TEAM = H4H7UN3F3K;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
