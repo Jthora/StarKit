@@ -88,8 +88,7 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  spec.source_files  = 'StarKit/*.{h,m}'
+  spec.source_files  = 'StarKit/**/*'
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
