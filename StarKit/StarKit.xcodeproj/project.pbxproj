@@ -7,10 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4BDE9257302F6FB0B4DD8F /* Pods_StarKit_StarKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A92906FF7845EE766C92B5 /* Pods_StarKit_StarKitTests.framework */; };
+		B411226A56838F851C0C80E8 /* Pods_StarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D80241F93E23C924830D40 /* Pods_StarKit.framework */; };
 		FA0D89152796397800A2D15D /* StarKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = FA0D89142796397800A2D15D /* StarKit.docc */; };
 		FA0D891B2796397800A2D15D /* StarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0D89102796397700A2D15D /* StarKit.framework */; };
 		FA0D89202796397800A2D15D /* StarKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0D891F2796397800A2D15D /* StarKitTests.swift */; };
 		FA0D89212796397800A2D15D /* StarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0D89132796397800A2D15D /* StarKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA7CE82127972E5C00C70F78 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7DE27972E5B00C70F78 /* Utils.swift */; };
+		FA7CE82227972E5C00C70F78 /* SCNGeometryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E027972E5B00C70F78 /* SCNGeometryExtension.swift */; };
+		FA7CE82327972E5C00C70F78 /* NASAAstronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E327972E5C00C70F78 /* NASAAstronomy.swift */; };
+		FA7CE82427972E5C00C70F78 /* Earth+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E427972E5C00C70F78 /* Earth+Extension.swift */; };
+		FA7CE82527972E5C00C70F78 /* JulianDay+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E527972E5C00C70F78 /* JulianDay+Extension.swift */; };
+		FA7CE82627972E5C00C70F78 /* Astronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E627972E5C00C70F78 /* Astronomy.swift */; };
+		FA7CE82727972E5C00C70F78 /* TextureGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7E827972E5C00C70F78 /* TextureGeneration.swift */; };
+		FA7CE82827972E5C00C70F78 /* StarChartRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7EA27972E5C00C70F78 /* StarChartRegistry.swift */; };
+		FA7CE82927972E5C00C70F78 /* StarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7EB27972E5C00C70F78 /* StarChart.swift */; };
+		FA7CE82A27972E5C00C70F78 /* StarChartSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7EC27972E5C00C70F78 /* StarChartSprite.swift */; };
+		FA7CE82B27972E5C00C70F78 /* StarChartGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7ED27972E5C00C70F78 /* StarChartGenerator.swift */; };
+		FA7CE82C27972E5C00C70F78 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7EF27972E5C00C70F78 /* Regex.swift */; };
+		FA7CE82D27972E5C00C70F78 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F127972E5C00C70F78 /* Math.swift */; };
+		FA7CE82E27972E5C00C70F78 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F327972E5C00C70F78 /* Time.swift */; };
+		FA7CE82F27972E5C00C70F78 /* Scaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F527972E5C00C70F78 /* Scaler.swift */; };
+		FA7CE83027972E5C00C70F78 /* AstroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F727972E5C00C70F78 /* AstroTimer.swift */; };
+		FA7CE83127972E5C00C70F78 /* AstroUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F827972E5C00C70F78 /* AstroUtils.swift */; };
+		FA7CE83227972E5C00C70F78 /* AstroAngleForeteller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7F927972E5C00C70F78 /* AstroAngleForeteller.swift */; };
+		FA7CE83327972E5C00C70F78 /* PsionoStreamImageStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7FB27972E5C00C70F78 /* PsionoStreamImageStrip.swift */; };
+		FA7CE83427972E5C00C70F78 /* PsionicImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7FC27972E5C00C70F78 /* PsionicImageGenerator.swift */; };
+		FA7CE83527972E5C00C70F78 /* Astrology.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7FE27972E5C00C70F78 /* Astrology.swift */; };
+		FA7CE83627972E5C00C70F78 /* AstrologicalNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE7FF27972E5C00C70F78 /* AstrologicalNode.swift */; };
+		FA7CE83727972E5C00C70F78 /* PlanetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80027972E5C00C70F78 /* PlanetState.swift */; };
+		FA7CE83827972E5C00C70F78 /* RetrogradeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80127972E5C00C70F78 /* RetrogradeState.swift */; };
+		FA7CE83927972E5C00C70F78 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80427972E5C00C70F78 /* Color.swift */; };
+		FA7CE83A27972E5C00C70F78 /* Natura.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80527972E5C00C70F78 /* Natura.swift */; };
+		FA7CE83B27972E5C00C70F78 /* CosmicAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80627972E5C00C70F78 /* CosmicAlignment.swift */; };
+		FA7CE83C27972E5C00C70F78 /* Personology.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80727972E5C00C70F78 /* Personology.swift */; };
+		FA7CE83D27972E5C00C70F78 /* Arcana.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80827972E5C00C70F78 /* Arcana.swift */; };
+		FA7CE83E27972E5C00C70F78 /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80927972E5C00C70F78 /* Zodiac.swift */; };
+		FA7CE83F27972E5C00C70F78 /* Chevron.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80A27972E5C00C70F78 /* Chevron.swift */; };
+		FA7CE84027972E5C00C70F78 /* Decans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80B27972E5C00C70F78 /* Decans.swift */; };
+		FA7CE84127972E5C00C70F78 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80D27972E5C00C70F78 /* Date+Extension.swift */; };
+		FA7CE84227972E5C00C70F78 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80E27972E5C00C70F78 /* UIImage+Extension.swift */; };
+		FA7CE84327972E5C00C70F78 /* View_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE80F27972E5C00C70F78 /* View_Extension.swift */; };
+		FA7CE84427972E5C00C70F78 /* SceneKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81027972E5C00C70F78 /* SceneKit+Extension.swift */; };
+		FA7CE84527972E5C00C70F78 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81127972E5C00C70F78 /* String+Extension.swift */; };
+		FA7CE84627972E5C00C70F78 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81227972E5C00C70F78 /* Dictionary+Extension.swift */; };
+		FA7CE84727972E5C00C70F78 /* SpriteKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81327972E5C00C70F78 /* SpriteKit+Extension.swift */; };
+		FA7CE84827972E5C00C70F78 /* TimeStreamMaterialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81527972E5C00C70F78 /* TimeStreamMaterialType.swift */; };
+		FA7CE84927972E5C00C70F78 /* TimeStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81627972E5C00C70F78 /* TimeStream.swift */; };
+		FA7CE84A27972E5C00C70F78 /* TimeStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81727972E5C00C70F78 /* TimeStreamView.swift */; };
+		FA7CE84B27972E5C00C70F78 /* TimeStreamSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81827972E5C00C70F78 /* TimeStreamSceneView.swift */; };
+		FA7CE84C27972E5C00C70F78 /* TimeStreamMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81927972E5C00C70F78 /* TimeStreamMaterial.swift */; };
+		FA7CE84D27972E5C00C70F78 /* TimeStreamNodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81A27972E5C00C70F78 /* TimeStreamNodeType.swift */; };
+		FA7CE84E27972E5C00C70F78 /* TimeStreamAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CE81B27972E5C00C70F78 /* TimeStreamAssets.scnassets */; };
+		FA7CE84F27972E5C00C70F78 /* TimeStreamGeometryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81C27972E5C00C70F78 /* TimeStreamGeometryType.swift */; };
+		FA7CE85027972E5C00C70F78 /* TimeStreamNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81D27972E5C00C70F78 /* TimeStreamNode.swift */; };
+		FA7CE85127972E5C00C70F78 /* TimeStreamGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */; };
+		FA7CE85227972E5C00C70F78 /* TimeStreamScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */; };
+		FA7CE8542797313800C70F78 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE8532797313800C70F78 /* Assets.swift */; };
+		FA7CE856279732EC00C70F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CE855279732EC00C70F78 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +78,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BAE73BADBF970AD84759B0C /* Pods-StarKit-StarKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarKit-StarKitTests.release.xcconfig"; path = "Target Support Files/Pods-StarKit-StarKitTests/Pods-StarKit-StarKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		55A92906FF7845EE766C92B5 /* Pods_StarKit_StarKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarKit_StarKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85AEB28A01CD7BB5537B9B0A /* Pods-StarKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarKit.debug.xcconfig"; path = "Target Support Files/Pods-StarKit/Pods-StarKit.debug.xcconfig"; sourceTree = "<group>"; };
+		919CCB934F4618291920F608 /* Pods-StarKit-StarKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarKit-StarKitTests.debug.xcconfig"; path = "Target Support Files/Pods-StarKit-StarKitTests/Pods-StarKit-StarKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		91D80241F93E23C924830D40 /* Pods_StarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCB0DEC02B9CBBEF11AC286 /* Pods-StarKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarKit.release.xcconfig"; path = "Target Support Files/Pods-StarKit/Pods-StarKit.release.xcconfig"; sourceTree = "<group>"; };
 		FA0D89102796397700A2D15D /* StarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0D89132796397800A2D15D /* StarKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarKit.h; sourceTree = "<group>"; };
 		FA0D89142796397800A2D15D /* StarKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = StarKit.docc; sourceTree = "<group>"; };
 		FA0D891A2796397800A2D15D /* StarKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0D891F2796397800A2D15D /* StarKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarKitTests.swift; sourceTree = "<group>"; };
+		FA7CE7DE27972E5B00C70F78 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FA7CE7E027972E5B00C70F78 /* SCNGeometryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNGeometryExtension.swift; sourceTree = "<group>"; };
+		FA7CE7E327972E5C00C70F78 /* NASAAstronomy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NASAAstronomy.swift; sourceTree = "<group>"; };
+		FA7CE7E427972E5C00C70F78 /* Earth+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Earth+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE7E527972E5C00C70F78 /* JulianDay+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JulianDay+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE7E627972E5C00C70F78 /* Astronomy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Astronomy.swift; sourceTree = "<group>"; };
+		FA7CE7E827972E5C00C70F78 /* TextureGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureGeneration.swift; sourceTree = "<group>"; };
+		FA7CE7EA27972E5C00C70F78 /* StarChartRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarChartRegistry.swift; sourceTree = "<group>"; };
+		FA7CE7EB27972E5C00C70F78 /* StarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarChart.swift; sourceTree = "<group>"; };
+		FA7CE7EC27972E5C00C70F78 /* StarChartSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarChartSprite.swift; sourceTree = "<group>"; };
+		FA7CE7ED27972E5C00C70F78 /* StarChartGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarChartGenerator.swift; sourceTree = "<group>"; };
+		FA7CE7EF27972E5C00C70F78 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		FA7CE7F127972E5C00C70F78 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		FA7CE7F327972E5C00C70F78 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		FA7CE7F527972E5C00C70F78 /* Scaler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scaler.swift; sourceTree = "<group>"; };
+		FA7CE7F727972E5C00C70F78 /* AstroTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroTimer.swift; sourceTree = "<group>"; };
+		FA7CE7F827972E5C00C70F78 /* AstroUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroUtils.swift; sourceTree = "<group>"; };
+		FA7CE7F927972E5C00C70F78 /* AstroAngleForeteller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstroAngleForeteller.swift; sourceTree = "<group>"; };
+		FA7CE7FB27972E5C00C70F78 /* PsionoStreamImageStrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsionoStreamImageStrip.swift; sourceTree = "<group>"; };
+		FA7CE7FC27972E5C00C70F78 /* PsionicImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PsionicImageGenerator.swift; sourceTree = "<group>"; };
+		FA7CE7FE27972E5C00C70F78 /* Astrology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Astrology.swift; sourceTree = "<group>"; };
+		FA7CE7FF27972E5C00C70F78 /* AstrologicalNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AstrologicalNode.swift; sourceTree = "<group>"; };
+		FA7CE80027972E5C00C70F78 /* PlanetState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetState.swift; sourceTree = "<group>"; };
+		FA7CE80127972E5C00C70F78 /* RetrogradeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrogradeState.swift; sourceTree = "<group>"; };
+		FA7CE80427972E5C00C70F78 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FA7CE80527972E5C00C70F78 /* Natura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Natura.swift; sourceTree = "<group>"; };
+		FA7CE80627972E5C00C70F78 /* CosmicAlignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmicAlignment.swift; sourceTree = "<group>"; };
+		FA7CE80727972E5C00C70F78 /* Personology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Personology.swift; sourceTree = "<group>"; };
+		FA7CE80827972E5C00C70F78 /* Arcana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arcana.swift; sourceTree = "<group>"; };
+		FA7CE80927972E5C00C70F78 /* Zodiac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
+		FA7CE80A27972E5C00C70F78 /* Chevron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chevron.swift; sourceTree = "<group>"; };
+		FA7CE80B27972E5C00C70F78 /* Decans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decans.swift; sourceTree = "<group>"; };
+		FA7CE80D27972E5C00C70F78 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE80E27972E5C00C70F78 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE80F27972E5C00C70F78 /* View_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View_Extension.swift; sourceTree = "<group>"; };
+		FA7CE81027972E5C00C70F78 /* SceneKit+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneKit+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE81127972E5C00C70F78 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE81227972E5C00C70F78 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE81327972E5C00C70F78 /* SpriteKit+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpriteKit+Extension.swift"; sourceTree = "<group>"; };
+		FA7CE81527972E5C00C70F78 /* TimeStreamMaterialType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamMaterialType.swift; sourceTree = "<group>"; };
+		FA7CE81627972E5C00C70F78 /* TimeStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStream.swift; sourceTree = "<group>"; };
+		FA7CE81727972E5C00C70F78 /* TimeStreamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamView.swift; sourceTree = "<group>"; };
+		FA7CE81827972E5C00C70F78 /* TimeStreamSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamSceneView.swift; sourceTree = "<group>"; };
+		FA7CE81927972E5C00C70F78 /* TimeStreamMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamMaterial.swift; sourceTree = "<group>"; };
+		FA7CE81A27972E5C00C70F78 /* TimeStreamNodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamNodeType.swift; sourceTree = "<group>"; };
+		FA7CE81B27972E5C00C70F78 /* TimeStreamAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = TimeStreamAssets.scnassets; sourceTree = "<group>"; };
+		FA7CE81C27972E5C00C70F78 /* TimeStreamGeometryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamGeometryType.swift; sourceTree = "<group>"; };
+		FA7CE81D27972E5C00C70F78 /* TimeStreamNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamNode.swift; sourceTree = "<group>"; };
+		FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamGeometry.swift; sourceTree = "<group>"; };
+		FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamScene.swift; sourceTree = "<group>"; };
+		FA7CE8532797313800C70F78 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		FA7CE855279732EC00C70F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B411226A56838F851C0C80E8 /* Pods_StarKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +157,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0D891B2796397800A2D15D /* StarKit.framework in Frameworks */,
+				2A4BDE9257302F6FB0B4DD8F /* Pods_StarKit_StarKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51E350592ADD2BE69C166DC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85AEB28A01CD7BB5537B9B0A /* Pods-StarKit.debug.xcconfig */,
+				ADCB0DEC02B9CBBEF11AC286 /* Pods-StarKit.release.xcconfig */,
+				919CCB934F4618291920F608 /* Pods-StarKit-StarKitTests.debug.xcconfig */,
+				0BAE73BADBF970AD84759B0C /* Pods-StarKit-StarKitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B29D50AA55A8B8EEAB157D72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91D80241F93E23C924830D40 /* Pods_StarKit.framework */,
+				55A92906FF7845EE766C92B5 /* Pods_StarKit_StarKitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA0D89062796397700A2D15D = {
 			isa = PBXGroup;
 			children = (
 				FA0D89122796397700A2D15D /* StarKit */,
 				FA0D891E2796397800A2D15D /* StarKitTests */,
 				FA0D89112796397700A2D15D /* Products */,
+				51E350592ADD2BE69C166DC7 /* Pods */,
+				B29D50AA55A8B8EEAB157D72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +207,12 @@
 		FA0D89122796397700A2D15D /* StarKit */ = {
 			isa = PBXGroup;
 			children = (
+				FA7CE7E127972E5B00C70F78 /* CoreAstrology */,
+				FA7CE80227972E5C00C70F78 /* CoreNatura */,
+				FA7CE80C27972E5C00C70F78 /* Extensions */,
+				FA7CE7DF27972E5B00C70F78 /* Geometry */,
+				FA7CE81427972E5C00C70F78 /* TimeStream */,
+				FA7CE7DC27972E5B00C70F78 /* Utils */,
 				FA0D89132796397800A2D15D /* StarKit.h */,
 				FA0D89142796397800A2D15D /* StarKit.docc */,
 			);
@@ -83,6 +225,188 @@
 				FA0D891F2796397800A2D15D /* StarKitTests.swift */,
 			);
 			path = StarKitTests;
+			sourceTree = "<group>";
+		};
+		FA7CE7DC27972E5B00C70F78 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE855279732EC00C70F78 /* Assets.xcassets */,
+				FA7CE8532797313800C70F78 /* Assets.swift */,
+				FA7CE7DE27972E5B00C70F78 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA7CE7DF27972E5B00C70F78 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7E027972E5B00C70F78 /* SCNGeometryExtension.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		FA7CE7E127972E5B00C70F78 /* CoreAstrology */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7E227972E5C00C70F78 /* Astronomy */,
+				FA7CE7E727972E5C00C70F78 /* TextureGeneration */,
+				FA7CE7E927972E5C00C70F78 /* StarChart */,
+				FA7CE7EE27972E5C00C70F78 /* Regex */,
+				FA7CE7F027972E5C00C70F78 /* Math */,
+				FA7CE7F227972E5C00C70F78 /* Time */,
+				FA7CE7F427972E5C00C70F78 /* Scaler */,
+				FA7CE7F627972E5C00C70F78 /* AstroTimer */,
+				FA7CE7FA27972E5C00C70F78 /* Psionics */,
+				FA7CE7FD27972E5C00C70F78 /* Astrology */,
+			);
+			path = CoreAstrology;
+			sourceTree = "<group>";
+		};
+		FA7CE7E227972E5C00C70F78 /* Astronomy */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7E327972E5C00C70F78 /* NASAAstronomy.swift */,
+				FA7CE7E427972E5C00C70F78 /* Earth+Extension.swift */,
+				FA7CE7E527972E5C00C70F78 /* JulianDay+Extension.swift */,
+				FA7CE7E627972E5C00C70F78 /* Astronomy.swift */,
+			);
+			path = Astronomy;
+			sourceTree = "<group>";
+		};
+		FA7CE7E727972E5C00C70F78 /* TextureGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7E827972E5C00C70F78 /* TextureGeneration.swift */,
+			);
+			path = TextureGeneration;
+			sourceTree = "<group>";
+		};
+		FA7CE7E927972E5C00C70F78 /* StarChart */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7EA27972E5C00C70F78 /* StarChartRegistry.swift */,
+				FA7CE7EB27972E5C00C70F78 /* StarChart.swift */,
+				FA7CE7EC27972E5C00C70F78 /* StarChartSprite.swift */,
+				FA7CE7ED27972E5C00C70F78 /* StarChartGenerator.swift */,
+			);
+			path = StarChart;
+			sourceTree = "<group>";
+		};
+		FA7CE7EE27972E5C00C70F78 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7EF27972E5C00C70F78 /* Regex.swift */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		FA7CE7F027972E5C00C70F78 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7F127972E5C00C70F78 /* Math.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		FA7CE7F227972E5C00C70F78 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7F327972E5C00C70F78 /* Time.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+		FA7CE7F427972E5C00C70F78 /* Scaler */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7F527972E5C00C70F78 /* Scaler.swift */,
+			);
+			path = Scaler;
+			sourceTree = "<group>";
+		};
+		FA7CE7F627972E5C00C70F78 /* AstroTimer */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7F727972E5C00C70F78 /* AstroTimer.swift */,
+				FA7CE7F827972E5C00C70F78 /* AstroUtils.swift */,
+				FA7CE7F927972E5C00C70F78 /* AstroAngleForeteller.swift */,
+			);
+			path = AstroTimer;
+			sourceTree = "<group>";
+		};
+		FA7CE7FA27972E5C00C70F78 /* Psionics */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7FB27972E5C00C70F78 /* PsionoStreamImageStrip.swift */,
+				FA7CE7FC27972E5C00C70F78 /* PsionicImageGenerator.swift */,
+			);
+			path = Psionics;
+			sourceTree = "<group>";
+		};
+		FA7CE7FD27972E5C00C70F78 /* Astrology */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE7FE27972E5C00C70F78 /* Astrology.swift */,
+				FA7CE7FF27972E5C00C70F78 /* AstrologicalNode.swift */,
+				FA7CE80027972E5C00C70F78 /* PlanetState.swift */,
+				FA7CE80127972E5C00C70F78 /* RetrogradeState.swift */,
+			);
+			path = Astrology;
+			sourceTree = "<group>";
+		};
+		FA7CE80227972E5C00C70F78 /* CoreNatura */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE80327972E5C00C70F78 /* Color */,
+				FA7CE80527972E5C00C70F78 /* Natura.swift */,
+				FA7CE80627972E5C00C70F78 /* CosmicAlignment.swift */,
+				FA7CE80727972E5C00C70F78 /* Personology.swift */,
+				FA7CE80827972E5C00C70F78 /* Arcana.swift */,
+				FA7CE80927972E5C00C70F78 /* Zodiac.swift */,
+				FA7CE80A27972E5C00C70F78 /* Chevron.swift */,
+				FA7CE80B27972E5C00C70F78 /* Decans.swift */,
+			);
+			path = CoreNatura;
+			sourceTree = "<group>";
+		};
+		FA7CE80327972E5C00C70F78 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE80427972E5C00C70F78 /* Color.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		FA7CE80C27972E5C00C70F78 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE80D27972E5C00C70F78 /* Date+Extension.swift */,
+				FA7CE80E27972E5C00C70F78 /* UIImage+Extension.swift */,
+				FA7CE80F27972E5C00C70F78 /* View_Extension.swift */,
+				FA7CE81027972E5C00C70F78 /* SceneKit+Extension.swift */,
+				FA7CE81127972E5C00C70F78 /* String+Extension.swift */,
+				FA7CE81227972E5C00C70F78 /* Dictionary+Extension.swift */,
+				FA7CE81327972E5C00C70F78 /* SpriteKit+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA7CE81427972E5C00C70F78 /* TimeStream */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CE81527972E5C00C70F78 /* TimeStreamMaterialType.swift */,
+				FA7CE81627972E5C00C70F78 /* TimeStream.swift */,
+				FA7CE81727972E5C00C70F78 /* TimeStreamView.swift */,
+				FA7CE81827972E5C00C70F78 /* TimeStreamSceneView.swift */,
+				FA7CE81927972E5C00C70F78 /* TimeStreamMaterial.swift */,
+				FA7CE81A27972E5C00C70F78 /* TimeStreamNodeType.swift */,
+				FA7CE81B27972E5C00C70F78 /* TimeStreamAssets.scnassets */,
+				FA7CE81C27972E5C00C70F78 /* TimeStreamGeometryType.swift */,
+				FA7CE81D27972E5C00C70F78 /* TimeStreamNode.swift */,
+				FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */,
+				FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */,
+			);
+			path = TimeStream;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +427,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0D89242796397800A2D15D /* Build configuration list for PBXNativeTarget "StarKit" */;
 			buildPhases = (
+				166662D2B56AC31DB20A7ADB /* [CP] Check Pods Manifest.lock */,
 				FA0D890B2796397700A2D15D /* Headers */,
 				FA0D890C2796397700A2D15D /* Sources */,
 				FA0D890D2796397700A2D15D /* Frameworks */,
@@ -121,9 +446,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA0D89272796397800A2D15D /* Build configuration list for PBXNativeTarget "StarKitTests" */;
 			buildPhases = (
+				46CFF0247B09768B3BEE2067 /* [CP] Check Pods Manifest.lock */,
 				FA0D89162796397800A2D15D /* Sources */,
 				FA0D89172796397800A2D15D /* Frameworks */,
 				FA0D89182796397800A2D15D /* Resources */,
+				A3CA5EFDA71909715F37DB20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +504,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7CE856279732EC00C70F78 /* Assets.xcassets in Resources */,
+				FA7CE84E27972E5C00C70F78 /* TimeStreamAssets.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,12 +518,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		166662D2B56AC31DB20A7ADB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46CFF0247B09768B3BEE2067 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarKit-StarKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3CA5EFDA71909715F37DB20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarKit-StarKitTests/Pods-StarKit-StarKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarKit-StarKitTests/Pods-StarKit-StarKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarKit-StarKitTests/Pods-StarKit-StarKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA0D890C2796397700A2D15D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7CE85227972E5C00C70F78 /* TimeStreamScene.swift in Sources */,
+				FA7CE83E27972E5C00C70F78 /* Zodiac.swift in Sources */,
 				FA0D89152796397800A2D15D /* StarKit.docc in Sources */,
+				FA7CE84227972E5C00C70F78 /* UIImage+Extension.swift in Sources */,
+				FA7CE84027972E5C00C70F78 /* Decans.swift in Sources */,
+				FA7CE83827972E5C00C70F78 /* RetrogradeState.swift in Sources */,
+				FA7CE84727972E5C00C70F78 /* SpriteKit+Extension.swift in Sources */,
+				FA7CE82227972E5C00C70F78 /* SCNGeometryExtension.swift in Sources */,
+				FA7CE82C27972E5C00C70F78 /* Regex.swift in Sources */,
+				FA7CE82E27972E5C00C70F78 /* Time.swift in Sources */,
+				FA7CE85027972E5C00C70F78 /* TimeStreamNode.swift in Sources */,
+				FA7CE83027972E5C00C70F78 /* AstroTimer.swift in Sources */,
+				FA7CE82927972E5C00C70F78 /* StarChart.swift in Sources */,
+				FA7CE82127972E5C00C70F78 /* Utils.swift in Sources */,
+				FA7CE85127972E5C00C70F78 /* TimeStreamGeometry.swift in Sources */,
+				FA7CE82527972E5C00C70F78 /* JulianDay+Extension.swift in Sources */,
+				FA7CE83F27972E5C00C70F78 /* Chevron.swift in Sources */,
+				FA7CE84827972E5C00C70F78 /* TimeStreamMaterialType.swift in Sources */,
+				FA7CE82F27972E5C00C70F78 /* Scaler.swift in Sources */,
+				FA7CE84927972E5C00C70F78 /* TimeStream.swift in Sources */,
+				FA7CE82827972E5C00C70F78 /* StarChartRegistry.swift in Sources */,
+				FA7CE82427972E5C00C70F78 /* Earth+Extension.swift in Sources */,
+				FA7CE82727972E5C00C70F78 /* TextureGeneration.swift in Sources */,
+				FA7CE8542797313800C70F78 /* Assets.swift in Sources */,
+				FA7CE83B27972E5C00C70F78 /* CosmicAlignment.swift in Sources */,
+				FA7CE84627972E5C00C70F78 /* Dictionary+Extension.swift in Sources */,
+				FA7CE84527972E5C00C70F78 /* String+Extension.swift in Sources */,
+				FA7CE83C27972E5C00C70F78 /* Personology.swift in Sources */,
+				FA7CE84A27972E5C00C70F78 /* TimeStreamView.swift in Sources */,
+				FA7CE83127972E5C00C70F78 /* AstroUtils.swift in Sources */,
+				FA7CE82627972E5C00C70F78 /* Astronomy.swift in Sources */,
+				FA7CE82B27972E5C00C70F78 /* StarChartGenerator.swift in Sources */,
+				FA7CE83927972E5C00C70F78 /* Color.swift in Sources */,
+				FA7CE83A27972E5C00C70F78 /* Natura.swift in Sources */,
+				FA7CE84C27972E5C00C70F78 /* TimeStreamMaterial.swift in Sources */,
+				FA7CE84F27972E5C00C70F78 /* TimeStreamGeometryType.swift in Sources */,
+				FA7CE82327972E5C00C70F78 /* NASAAstronomy.swift in Sources */,
+				FA7CE84127972E5C00C70F78 /* Date+Extension.swift in Sources */,
+				FA7CE84427972E5C00C70F78 /* SceneKit+Extension.swift in Sources */,
+				FA7CE83227972E5C00C70F78 /* AstroAngleForeteller.swift in Sources */,
+				FA7CE83727972E5C00C70F78 /* PlanetState.swift in Sources */,
+				FA7CE82A27972E5C00C70F78 /* StarChartSprite.swift in Sources */,
+				FA7CE83627972E5C00C70F78 /* AstrologicalNode.swift in Sources */,
+				FA7CE83427972E5C00C70F78 /* PsionicImageGenerator.swift in Sources */,
+				FA7CE82D27972E5C00C70F78 /* Math.swift in Sources */,
+				FA7CE83527972E5C00C70F78 /* Astrology.swift in Sources */,
+				FA7CE83D27972E5C00C70F78 /* Arcana.swift in Sources */,
+				FA7CE83327972E5C00C70F78 /* PsionoStreamImageStrip.swift in Sources */,
+				FA7CE84D27972E5C00C70F78 /* TimeStreamNodeType.swift in Sources */,
+				FA7CE84327972E5C00C70F78 /* View_Extension.swift in Sources */,
+				FA7CE84B27972E5C00C70F78 /* TimeStreamSceneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +784,7 @@
 		};
 		FA0D89252796397800A2D15D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85AEB28A01CD7BB5537B9B0A /* Pods-StarKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -369,6 +813,7 @@
 		};
 		FA0D89262796397800A2D15D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCB0DEC02B9CBBEF11AC286 /* Pods-StarKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -397,7 +842,9 @@
 		};
 		FA0D89282796397800A2D15D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 919CCB934F4618291920F608 /* Pods-StarKit-StarKitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4H7UN3F3K;
@@ -413,7 +860,9 @@
 		};
 		FA0D89292796397800A2D15D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BAE73BADBF970AD84759B0C /* Pods-StarKit-StarKitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H4H7UN3F3K;

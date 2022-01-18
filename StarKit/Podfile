@@ -6,6 +6,8 @@ target 'StarKit' do
   use_frameworks!
 
   # Pods for StarKit
+  pod 'SwiftAA'
+  pod 'ObjCAA'
 
   target 'StarKitTests' do
     # Pods for testing
