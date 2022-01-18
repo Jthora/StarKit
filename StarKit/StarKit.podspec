@@ -90,6 +90,9 @@ Pod::Spec.new do |spec|
   #
   spec.source_files  = 'StarKit/**/*'
   spec.exclude_files = "Classes/Exclude"
+  spec.resource_bundles = {
+    'StarKit_bundles' => ['StarKitAssets.xcassets']
+  } 
 
   # spec.public_header_files = "Classes/**/*.h"
 

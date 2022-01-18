@@ -60,8 +60,8 @@
 		FA7CE85027972E5C00C70F78 /* TimeStreamNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81D27972E5C00C70F78 /* TimeStreamNode.swift */; };
 		FA7CE85127972E5C00C70F78 /* TimeStreamGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */; };
 		FA7CE85227972E5C00C70F78 /* TimeStreamScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */; };
-		FA7CE8542797313800C70F78 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE8532797313800C70F78 /* Assets.swift */; };
-		FA7CE856279732EC00C70F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CE855279732EC00C70F78 /* Assets.xcassets */; };
+		FA7CE8542797313800C70F78 /* StarKitAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE8532797313800C70F78 /* StarKitAssets.swift */; };
+		FA7CE856279732EC00C70F78 /* StarKitAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CE855279732EC00C70F78 /* StarKitAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +133,8 @@
 		FA7CE81D27972E5C00C70F78 /* TimeStreamNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamNode.swift; sourceTree = "<group>"; };
 		FA7CE81E27972E5C00C70F78 /* TimeStreamGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamGeometry.swift; sourceTree = "<group>"; };
 		FA7CE81F27972E5C00C70F78 /* TimeStreamScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStreamScene.swift; sourceTree = "<group>"; };
-		FA7CE8532797313800C70F78 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
-		FA7CE855279732EC00C70F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		FA7CE8532797313800C70F78 /* StarKitAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarKitAssets.swift; sourceTree = "<group>"; };
+		FA7CE855279732EC00C70F78 /* StarKitAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StarKitAssets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +224,8 @@
 		FA7CE7DC27972E5B00C70F78 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FA7CE855279732EC00C70F78 /* Assets.xcassets */,
-				FA7CE8532797313800C70F78 /* Assets.swift */,
+				FA7CE855279732EC00C70F78 /* StarKitAssets.xcassets */,
+				FA7CE8532797313800C70F78 /* StarKitAssets.swift */,
 				FA7CE7DE27972E5B00C70F78 /* Utils.swift */,
 			);
 			path = Utils;
@@ -479,7 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7CE856279732EC00C70F78 /* Assets.xcassets in Resources */,
+				FA7CE856279732EC00C70F78 /* StarKitAssets.xcassets in Resources */,
 				FA7CE84E27972E5C00C70F78 /* TimeStreamAssets.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +584,7 @@
 				FA7CE82827972E5C00C70F78 /* StarChartRegistry.swift in Sources */,
 				FA7CE82427972E5C00C70F78 /* Earth+Extension.swift in Sources */,
 				FA7CE82727972E5C00C70F78 /* TextureGeneration.swift in Sources */,
-				FA7CE8542797313800C70F78 /* Assets.swift in Sources */,
+				FA7CE8542797313800C70F78 /* StarKitAssets.swift in Sources */,
 				FA7CE83B27972E5C00C70F78 /* CosmicAlignment.swift in Sources */,
 				FA7CE84627972E5C00C70F78 /* Dictionary+Extension.swift in Sources */,
 				FA7CE84527972E5C00C70F78 /* String+Extension.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  Assets.swift
+//  StarKitAssets.swift
 //  ResonantFinder
 //
 //  Created by Jordan Trana on 12/6/19.
