@@ -6,7 +6,11 @@
 //  Copyright © 2019 Jordan Trana. All rights reserved.
 //
 
-import UIKit
+#if os(OSX)
+    import AppKit
+#else
+    import UIKit
+#endif
 
 open class TGTextureGenerator {
     public static func buildHueCircle(in rect: CGRect, radius: CGFloat, scale: CGFloat = UIScreen.main.scale) -> CGImage {

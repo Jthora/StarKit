@@ -6,7 +6,7 @@
 //  Copyright © 2019 Jordan Trana. All rights reserved.
 //
 
-import UIKit
+
 import SwiftAA
 
 extension Arcana {
@@ -87,7 +87,7 @@ extension Arcana {
             return force?.duality ?? element?.duality
         }
         
-        public var image:UIImage {
+        public var image:StarKitImage {
             switch self {
             case .fire: return StarKitAssets.Images.NaturaSymbols.fire
             case .air: return StarKitAssets.Images.NaturaSymbols.air
@@ -343,7 +343,7 @@ extension Arcana {
             }
         }
         
-        public var image:UIImage {
+        public var image:StarKitImage {
             switch self {
             case .fire: return StarKitAssets.Images.NaturaSymbols.fire
             case .air: return StarKitAssets.Images.NaturaSymbols.air
@@ -367,7 +367,7 @@ extension Arcana {
             }
         }
         
-        public var image:UIImage {
+        public var image:StarKitImage {
             switch self {
             case .light: return StarKitAssets.Images.NaturaSymbols.one
             case .heat: return StarKitAssets.Images.NaturaSymbols.many

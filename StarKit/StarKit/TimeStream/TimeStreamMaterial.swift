@@ -13,11 +13,11 @@ extension TimeStream {
             switch type {
             case .test:
                 let material = SCNMaterial()
-                material.diffuse.contents = UIImage(named: "testTexture")
+                material.diffuse.contents = StarKitImage(named: "testTexture")
                 return material
-            case .psionicStrip(starcharts: let starcharts):
+            case .psionicStrip(starcharts:):
                 let material = SCNMaterial()
-                material.diffuse.contents = UIImage(named: "testTexture")
+                material.diffuse.contents = StarKitImage(named: "testTexture")
                 return material
             }
         }

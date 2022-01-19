@@ -60,7 +60,7 @@ extension Earth {
             LST += 360
         }
         let ecliptic = self.obliquityOfEcliptic(mean: true).inRadians.value
-        var MC = atan(tan(LST.inRadians.value) / cos(ecliptic))
+        let MC = atan(tan(LST.inRadians.value) / cos(ecliptic))
         var MCdeg = Radian(MC).inDegrees
         if MCdeg < 0 {
             MCdeg += 180
@@ -75,13 +75,13 @@ extension Earth {
     
     public func getASC(coords:GeographicCoordinates) -> Degree {
         
-        let precession = self.position().precessedCoordinates(to: .epochOfTheDate(self.julianDay))
-        let position = self.position()
-        let equatorialPosition = self.position().makeEquatorialCoordinates()
-        let equatorialPrecession = equatorialPosition.precessedCoordinates(to: .meanEquinoxOfTheDate(self.julianDay))
-        let equatorialPositionRA = equatorialPosition.rightAscension.inDegrees
-        let galacticCoords = self.position().makeEquatorialCoordinates().makeGalacticCoordinates()
-        let horizontal = self.position().makeEquatorialCoordinates().makeHorizontalCoordinates(for: coords, at: self.julianDay)
+        //let precession = self.position().precessedCoordinates(to: .epochOfTheDate(self.julianDay))
+        //let position = self.position()
+        //let equatorialPosition = self.position().makeEquatorialCoordinates()
+        //let equatorialPrecession = equatorialPosition.precessedCoordinates(to: .meanEquinoxOfTheDate(self.julianDay))
+        //let equatorialPositionRA = equatorialPosition.rightAscension.inDegrees
+        //let galacticCoords = self.position().makeEquatorialCoordinates().makeGalacticCoordinates()
+        //let horizontal = self.position().makeEquatorialCoordinates().makeHorizontalCoordinates(for: coords, at: self.julianDay)
         
         let latitude = coords.latitude.inRadians.value
         let ecliptic = self.obliquityOfEcliptic(mean: true).inRadians.value // obliquityOfEcliptic 'Inclination'

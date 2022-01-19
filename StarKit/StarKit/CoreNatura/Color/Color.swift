@@ -5,7 +5,13 @@
 //  Created by Jordan Trana on 12/6/20.
 //
 
-import UIKit
+
+#if os(OSX)
+    import AppKit
+    
+#else
+    import UIKit
+#endif
 
 public struct RGYBColor
 {

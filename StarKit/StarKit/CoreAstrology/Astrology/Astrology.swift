@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jordan Trana. All rights reserved.
 //
 
-import UIKit
+
 import SwiftAA
 
 open class CoreAstrology {
@@ -263,7 +263,7 @@ open class CoreAstrology {
             }
         }
         
-        public var image:UIImage {
+        public var image:StarKitImage {
             switch self {
             case .conjunction: return StarKitAssets.Images.AspectSymbols.conjunct
             case .opposition: return StarKitAssets.Images.AspectSymbols.opposition
@@ -373,9 +373,9 @@ open class CoreAstrology {
             }
         }
         
-        public var image:UIImage? {
+        public var image:StarKitImage? {
             guard let name = imageName else {return nil}
-            return UIImage(named: name)
+            return StarKitImage(named: name)
         }
         
         

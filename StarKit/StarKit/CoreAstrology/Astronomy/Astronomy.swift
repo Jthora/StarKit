@@ -6,7 +6,7 @@
 //  Copyright © 2018 Jordan Trana. All rights reserved.
 //
 
-import UIKit
+
 import SwiftAA
 import ObjCAA
 
@@ -35,8 +35,8 @@ open class CoreAstronomy {
 }
 
 extension Planet: Hashable {
-    public var hashValue: Int {
-        return name.hash
+    public func hash(into hasher: inout Hasher){
+        hasher.combine(name)
     }
 }
 

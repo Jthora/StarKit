@@ -86,7 +86,7 @@ open class StarChart {
         var filteredAspects:[StarChartAspect]
         if let filter = filter {
             filteredAspects = aspects.filter({ (aspect) -> Bool in
-                let isWhitelisted = aspect.relation.type != nil && filter.contains(aspect.primaryBody) && filter.contains(aspect.secondaryBody)
+                let isWhitelisted = filter.contains(aspect.primaryBody) && filter.contains(aspect.secondaryBody)
                 
                 return isWhitelisted
             })
@@ -141,8 +141,8 @@ open class StarChart {
             if aspect.relation.category == category,
             limitList?.contains(aspect.primaryBody) != false,
             limitList?.contains(aspect.secondaryBody) != false,
-                aspect.relation.concentration ?? 0 > highestConcentration {
-                highestConcentration = aspect.relation.concentration ?? 0
+               aspect.relation.concentration > highestConcentration {
+                highestConcentration = aspect.relation.concentration
             }
         }
         return highestConcentration
@@ -161,7 +161,7 @@ open class StarChart {
             if aspect.relation.category == category,
             limitList?.contains(aspect.primaryBody) != false,
             limitList?.contains(aspect.secondaryBody) != false {
-                totalConcentration += aspect.relation.concentration ?? 0
+                totalConcentration += aspect.relation.concentration
             }
         }
         return totalConcentration
@@ -211,7 +211,7 @@ open class StarChart {
     }
     
     public func localAbsoluteGravimetricTensor(bodyMass:Kilogram = 155, geographicCoordinates: GeographicCoordinates, date: Date) -> CoreAstrology.GravimetricTensor {
-        var localGravitationalTensor = CoreAstrology.GravimetricTensor.empty
+        let localGravitationalTensor = CoreAstrology.GravimetricTensor.empty
         
         // Slighly Less Accurate, but effective enough... Instead just add Earth Tensor using IC (opposite of mid-heaven) with Earth Gravity for Magnitude
         
@@ -227,7 +227,7 @@ open class StarChart {
     }
     
     public func localNetGravimetricTensor(bodyMass:Kilogram = 155, geographicCoordinates: GeographicCoordinates, date: Date) -> CoreAstrology.GravimetricTensor {
-        var localGravitationalTensor = CoreAstrology.GravimetricTensor.empty
+        let localGravitationalTensor = CoreAstrology.GravimetricTensor.empty
         
         // Use a Geo-Location Coordinate and Earth Date
         // Inquire SwiftAA for Angular Sky Positions of Each Planet during Earth Date relative to Earth

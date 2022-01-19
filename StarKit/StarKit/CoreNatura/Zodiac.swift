@@ -6,13 +6,10 @@
 //  Copyright © 2019 Jordan Trana. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import SwiftAA
 
-
 extension Arcana {
-
-    
     /// 12 Zodiac Signs - Greek
     public enum Zodiac:Int, CaseIterable {
         
@@ -106,7 +103,7 @@ extension Arcana {
             return imageName + "_White"
         }
         
-        public var image:UIImage {
+        public var image:StarKitImage {
             switch self {
             case .aries: return StarKitAssets.Images.ZodiacSymbols.aries
             case .taurus: return StarKitAssets.Images.ZodiacSymbols.taurus

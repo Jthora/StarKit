@@ -38,7 +38,7 @@ open class StarChartSpriteNode:SKSpriteNode {
         }
         
         public var cgImage:CGImage {
-            return UIImage(named: imageName)!.cgImage!
+            return StarKitImage(named: imageName)!.cgImage!
         }
         
         public var texture:SKTexture {
