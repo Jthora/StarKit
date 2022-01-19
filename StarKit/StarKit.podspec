@@ -14,6 +14,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '15.2'
   s.osx.deployment_target = '12.2'
+  #s.watchos.deployment_target = "8.3"
+  #s.tvos.deployment_target = "9.0"
 
   s.swift_version = '5.0'
   s.source       = { :git => "https://github.com/Jthora/StarKit.git", :tag => s.version.to_s }
@@ -34,6 +36,8 @@ Pod::Spec.new do |s|
   # spec.libraries = "iconv", "xml2"
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 x86_64 i386 armv7' }
+  s.user_target_xcconfig = { 'VALID_ARCHS' => 'arm64 x86_64 i386 armv7' }
 
   s.dependency 'SwiftAA'
   s.dependency 'ObjCAA'
