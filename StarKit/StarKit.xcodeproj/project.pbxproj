@@ -658,7 +658,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
-				MARKETING_VERSION = 1.2.;
+				MARKETING_VERSION = 1.2.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "app.thora.-.StarKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -703,7 +703,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
-				MARKETING_VERSION = 1.2.;
+				MARKETING_VERSION = 1.2.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "app.thora.-.StarKit";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
