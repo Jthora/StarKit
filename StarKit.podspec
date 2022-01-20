@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StarKit"
-  s.version      = "1.2.1"
+  s.version      = "1.2.2"
   s.summary      = "Core Astrology Framework for calculating planetary harmonics."
 
 
