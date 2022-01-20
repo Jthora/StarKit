@@ -12,6 +12,7 @@
     import UIKit
 #endif
 
+#if TARGET_OS_IOS
 open class TGTextureGenerator {
     public static func buildHueCircle(in rect: CGRect, radius: CGFloat, scale: CGFloat = UIScreen.main.scale) -> CGImage {
         let width = Int(rect.size.width * scale)
@@ -133,3 +134,5 @@ open class TGTextureGenerator {
     }
 }
 
+
+#endif

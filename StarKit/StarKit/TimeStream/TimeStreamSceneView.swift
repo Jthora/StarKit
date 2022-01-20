@@ -5,12 +5,13 @@
 //  Created by Jordan Trana on 10/6/21.
 //
 
+#if TARGET_OS_IOS
+
 import SceneKit
 import SwiftUI
 
 
 public struct TimeStreamSceneView: UIViewRepresentable {
-    
     let scene = TimeStreamScene()
     
     var cameraNode: SCNNode = {
@@ -90,8 +91,11 @@ public struct TimeStreamSceneView: UIViewRepresentable {
     }
 }
 
+
 struct TimeStreamView_Previews: PreviewProvider {
     static var previews: some View {
         TimeStreamView()
     }
 }
+
+#endif

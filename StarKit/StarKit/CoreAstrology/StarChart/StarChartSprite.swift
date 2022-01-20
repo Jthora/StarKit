@@ -37,11 +37,13 @@ open class StarChartSpriteNode:SKSpriteNode {
             }
         }
         
-        public var cgImage:CGImage {
-            return StarKitImage(named: imageName)!.cgImage!
+#if TARGET_OS_IOS
+        public var cgImage:CGImage? {
+            guard let image = StarKitImage(named: imageName) else { return }
+            return image.cgImage
         }
         
-        public var texture:SKTexture {
+        public var texture:SKTexture? {
             return SKTexture(cgImage: cgImage)
         }
     }
@@ -61,11 +63,12 @@ open class StarChartSpriteNode:SKSpriteNode {
             }
         }
         
-        public var cgImage:CGImage {
-            return UIImage(named: imageName)!.cgImage!
+        public var cgImage:CGImage? {
+            guard let image = StarKitImage(named: imageName) else { return }
+            return image.cgImage
         }
         
-        public var texture:SKTexture {
+        public var texture:SKTexture? {
             return SKTexture(cgImage: cgImage)
         }
     }

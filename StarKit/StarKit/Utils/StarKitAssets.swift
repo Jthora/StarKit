@@ -6,14 +6,6 @@
 //  Copyright © 2019 Jordan Trana. All rights reserved.
 //
 
-#if os(OSX)
-    import AppKit
-    public typealias StarKitImage=NSImage
-#else
-    import UIKit
-    public typealias StarKitImage=UIImage
-#endif
-
 open class StarKitAssets {
     open class Images {
         

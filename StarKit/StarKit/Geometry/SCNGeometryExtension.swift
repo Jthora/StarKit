@@ -39,17 +39,25 @@ extension SCNGeometry {
     }
     
     public static func rectangle(position:SCNVector3, width:Float, height:Float) -> SCNGeometry {
-        return SCNGeometry.quad(v1: SCNVector3(x: position.x - (width/2),
-                                               y: position.y - (height/2),
+        
+#if TARGET_OS_IOS || os(OSX)
+        let w = CGFloat(width/2)
+        let h = CGFloat(height/2)
+#else
+        let w = width/2
+        let h = height/2
+#endif
+        return SCNGeometry.quad(v1: SCNVector3(x: position.x - w,
+                                               y: position.y - h,
                                                z: position.z),
-                                v2: SCNVector3(x: position.x + (width/2),
-                                               y: position.y - (height/2),
+                                v2: SCNVector3(x: position.x + w,
+                                               y: position.y - h,
                                                z: position.z),
-                                v3: SCNVector3(x: position.x + (width/2),
-                                               y: position.y + (height/2),
+                                v3: SCNVector3(x: position.x + w,
+                                               y: position.y + h,
                                                z: position.z),
-                                v4: SCNVector3(x: position.x - (width/2),
-                                               y: position.y + (height/2),
+                                v4: SCNVector3(x: position.x - w,
+                                               y: position.y + h,
                                                z: position.z))
     }
     

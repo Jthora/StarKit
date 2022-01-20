@@ -85,9 +85,8 @@ public struct Planet: Equatable {
     
     // Distance from the sun in millions of km
     // Source: http://www.enchantedlearning.com/subjects/astronomy/planets/
-    public var orbitalRadius: CGFloat
-    
-    public var displayOrbitalRadius: CGFloat {
+    public var orbitalRadius: Float
+    public var displayOrbitalRadius: Float {
         get {
             return orbitalRadius / 100
         }

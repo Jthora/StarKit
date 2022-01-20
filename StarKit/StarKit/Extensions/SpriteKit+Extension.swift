@@ -8,6 +8,12 @@
 
 import SpriteKit
 
+#if os(OSX)
+    import AppKit
+#else
+    import UIKit
+#endif
+
 extension CGImage {
     
     
@@ -17,8 +23,9 @@ extension CGImage {
         return CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height))
     }
     
+
     // MARK: Rotate
-    
+#if TARGET_OS_IOS
     public func imageRotatedByDegrees(degrees: CGFloat) -> CGImage {
         //Create the bitmap context
         UIGraphicsBeginImageContext(CGSize(width: width, height: height))
@@ -34,6 +41,7 @@ extension CGImage {
         UIGraphicsEndImageContext()
         return context.makeImage()!
     }
+#endif
     
     // MARK: Grayscale
     
