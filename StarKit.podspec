@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.author             = { "Jordan Trana" => "jono@thora.show" }
   # s.social_media_url   = "https://twitter.com/Jordan Trana"
 
-  s.ios.deployment_target = '15.2'
-  s.osx.deployment_target = '12.2'
+  s.ios.deployment_target = '12.0'
+  s.osx.deployment_target = '10.15'
   #s.watchos.deployment_target = "8.3"
   #s.tvos.deployment_target = "9.0"
 
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source_files  = 'StarKit/**/*.{swift,h,m}'
   s.exclude_files = 'Classes/Exclude'
 
-  s.frameworks = "Foundation"
+  s.static_framework = true
 
   s.resources = ['StarKit/**/*.{plist,json,bundle}']
   s.resource_bundles = {
@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
+  s.libraries = "c++", "c"
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
