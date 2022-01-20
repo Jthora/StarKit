@@ -7,9 +7,7 @@
 //
 
 
-#if os(OSX)
-    
-#else
+#if TARGET_OS_IOS
     import UIKit
 
     extension UIImage {
